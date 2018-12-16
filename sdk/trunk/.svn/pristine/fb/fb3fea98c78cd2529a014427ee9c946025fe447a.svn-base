@@ -1,0 +1,47 @@
+package ir.magfa.sdk;
+
+import ir.magfa.sdk.dto.KartableTaskDTO;
+import ir.magfa.sdk.dto.Note;
+import org.kie.server.api.model.KieContainerResourceList;
+import org.kie.server.client.KieServicesClient;
+import org.kie.server.client.ProcessServicesClient;
+import org.kie.server.client.QueryServicesClient;
+import org.kie.server.client.UserTaskServicesClient;
+
+import java.io.IOException;
+import java.util.List;
+
+/**
+ * Created by Mostafa on 6/17/2018.
+ */
+public class Test
+{
+
+
+    public static void main(String[] args) throws IllegalAccessException, IOException {
+        List<KartableTaskDTO> result = null;
+        MagfaKieSDK magfaKieSDK = new MagfaKieSDKImpl();
+        Note note = new Note();
+        note.setId(0l);
+        note.setEmployee("hadi");
+        note.setReason("speak english");
+//        result= magfaKieSDK.findAllTask(1, "http://172.16.9.50:8230/kie-server/services/rest/server", note, "kieserver", "kieserver1!");
+        KieServicesClient client= magfaKieSDK.initConfiguration("http://172.16.9.50:8230/kie-server/services/rest/server", "kieserver", "kieserver1!");
+        QueryServicesClient queryClient = magfaKieSDK.getQueryClient(client);
+        ProcessServicesClient processClient = magfaKieSDK.getProcessServicesClient(client);
+        UserTaskServicesClient taskClient = magfaKieSDK.getUserTaskServicesClient(client);
+        KieContainerResourceList containers = (KieContainerResourceList)client.listContainers().getResult();
+        magfaKieSDK.getAllAvailableProcess(client);
+        result = magfaKieSDK.stateMachine(1,"kieserver",client,taskClient,queryClient,processClient,containers,note);
+
+        for (KartableTaskDTO kartableTaskDTO : result){
+            System.out.println(kartableTaskDTO.getTaskId());
+        }
+    }
+//
+//
+//    public void ch1(){
+//        Gson gson = new Gson();
+//    }
+
+}
