@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form id="adminProfile">
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" header="Top" resizable="true" closable="true"
+                              collapsible="true">
+                    <h:outputText value="North unit content."/>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="250" header="Base Information" resizable="true" closable="true"
+                              collapsible="true">
+                    <p:menu style="width: inherit; height: auto">
+                        <p:menuitem value="Province" icon="fa fa-info" style="margin-bottom: 10px"/>
+                        <p:menuitem value="City" icon="fa fa-info" style="margin-bottom: 10px"/>
+                        <p:menuitem value="Guild" icon="fa fa-info" style="margin-bottom: 10px"/>
+                        <p:menuitem value="Exit" icon="fa fa-sign-out" style="margin-bottom: 10px"/>
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+                    //Diagram
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:form>
+    </h:body>
+</f:view>
+</html>

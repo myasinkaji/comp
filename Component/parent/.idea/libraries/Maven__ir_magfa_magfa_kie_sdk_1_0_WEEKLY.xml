@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ir.magfa:magfa-kie-sdk:1.0-WEEKLY">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/ir/magfa/magfa-kie-sdk/1.0-WEEKLY/magfa-kie-sdk-1.0-WEEKLY.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/ir/magfa/magfa-kie-sdk/1.0-WEEKLY/magfa-kie-sdk-1.0-WEEKLY-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/ir/magfa/magfa-kie-sdk/1.0-WEEKLY/magfa-kie-sdk-1.0-WEEKLY-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

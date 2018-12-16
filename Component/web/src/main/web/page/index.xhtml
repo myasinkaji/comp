@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+    <body>
+    <h:form id="adminNewsForm">
+
+        <p:dataGrid var="news" value="#{adminNewsController.allNews}" columns="3" layout="grid"
+                    rows="12" paginator="true" id="news"
+                    paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                    rowsPerPageTemplate="6,12,16">
+
+            <f:facet name="header">
+                News
+            </f:facet>
+
+            <p:panel header="#{news.id}" style="text-align:center">
+                <h:panelGrid columns="1" style="width:100%">
+
+                    <h:outputText value="Subject:"/>
+                    <h:outputText value="#{news.subject}"/>
+
+                    <h:outputText value="Text:"/>
+                    <h:outputText value="#{news.text}"/>
+
+                </h:panelGrid>
+            </p:panel>
+
+        </p:dataGrid>
+
+        <!--<p:repeat value="#{adminNewsController.allNews}" var="news">
+            <h:panelGrid columns="2" style="width:100%" columnClasses="logo,detail">
+                <p:commandLink oncomplete="PF('carDialog').show()">
+                    <f:setPropertyActionListener value="#{news}" target="#{adminNewsController.news}" />
+                    <p:graphicImage name="demo/images/car/#{car.brand}-big.gif" />
+                </p:commandLink>
+
+                <p:outputPanel>
+                    <h:panelGrid columns="2" cellpadding="5">
+                        <h:outputText value="subject:" />
+                        <h:outputText value="#{news.subject}" style="font-weight: bold"/>
+
+                        <h:outputText value="text:" />
+                        <h:outputText value="#{news.text}" style="font-weight: bold"/>
+
+                    </h:panelGrid>
+                </p:outputPanel>
+            </h:panelGrid>
+            <hr />
+        </p:repeat>-->
+        <!--<p:dataView var="news" value="#{adminNewsController.allNews}" rows="12" paginator="true" rowsPerPageTemplate="6,12,16"
+                    paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                    >
+            <p:dataViewListItem>
+                <h:panelGrid columns="3" style="width:100%" columnClasses="logo,detail">
+
+                    <p:outputPanel>
+                        <h:panelGrid columns="2" cellpadding="5">
+                            <h:outputText value="Id:" />
+                            <h:outputText value="#{news.subject}" style="font-weight: bold"/>
+
+                            <h:outputText value="Year:" />
+                            <h:outputText value="#{news.text}" style="font-weight: bold"/>
+
+                        </h:panelGrid>
+                    </p:outputPanel>
+
+                    <p:commandLink update=":form:carDetail" oncomplete="PF('carDialog').show()" title="View Detail">
+                        <h:outputText styleClass="ui-icon pi pi-search" style="margin:0 auto;" />
+                        <f:setPropertyActionListener value="#{car}" target="#{dataGridView.selectedCar}" />
+                    </p:commandLink>
+                </h:panelGrid>
+            </p:dataViewListItem>
+
+        </p:dataView>-->
+    </h:form>
+    </body>
+
+
+</f:view>
+</html>

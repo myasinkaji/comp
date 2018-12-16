@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form id="cityForm">
+
+            <p:dataTable id="cityTable" var="c" value="#{cityController.allCities}" style="margin-bottom:40px">
+                <p:column headerText="Name" sortBy="#{c.name}" filterBy="#{c.name}" filterMatchMode="contains">
+                    <h:outputText value="#{c.name}" />
+                </p:column>
+                <p:column headerText="Province" sortBy="#{c.province.name}" filterBy="#{c.province.name}" filterMatchMode="contains">
+                    <h:outputText value="#{c.province.name}" />
+                </p:column>
+            </p:dataTable>
+
+            <p:panel id="cityPanel" header="City Panel" style="margin-bottom:10px;">
+                <h:panelGrid columns="4" cellpadding="5">
+
+                    <p:outputLabel for="name" value="Name: "/>
+                    <p:inputText id="name" value="#{cityController.city.name}" required="true" label="Tiltle"
+                    style="margin-left: 20px"/>
+
+                    <p:outputLabel for="province" value="Province: "/>
+                    <p:selectOneMenu id="province" value="#{cityController.city.province}"
+                                     converter="entityConverter" panelStyle="width:180px"
+                                     effect="fade" style="width:147px" filter="true" filterMatchMode="contains">
+                        <f:selectItems value="#{provinceController.allProvinces}" var="p" itemLabel="#{p.title}"
+                                       itemValue="#{p}"/>
+                    </p:selectOneMenu>
+
+                </h:panelGrid>
+            </p:panel>
+            <p:commandButton id="add" value="save" action="#{cityController.save}"
+                             icon="fa fa-save" update=":cityForm"/>
+        </h:form>
+    </h:body>
+</f:view>
+</html>

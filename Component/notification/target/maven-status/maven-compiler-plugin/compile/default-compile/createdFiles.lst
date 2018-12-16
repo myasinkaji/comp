@@ -1,0 +1,5 @@
+ir\component\notification\service\EmailNotification$1.class
+ir\component\notification\service\NotificationService.class
+ir\component\notification\service\SMSNotification.class
+ir\component\notification\service\EmailNotification.class
+ir\component\notification\consumer\NotificationConsumer.class

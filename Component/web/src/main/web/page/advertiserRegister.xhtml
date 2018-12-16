@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+
+    <h:body>
+
+        <style type="text/css">
+        </style>
+
+        <h:form id="advertiserRegisterForm">
+
+            <p:growl id="growl"/>
+
+            <p:panel id="newAdvertiser" header="New Advertiser" style="margin-bottom:10px;">
+                <p:messages id="messages"/>
+                <h:panelGrid columns="4" cellpadding="5">
+                    <h:outputLabel for="firstname" value="First name: *"/>
+                    <p:inputText id="firstname" value="#{userRegisterController.user.firstName}" required="true"
+                                 label="Firstname" style="margin-right: 50px">
+                        <f:validateLength minimum="2"/>
+                    </p:inputText>
+
+                    <h:outputLabel for="lastname" value="Last name: *"/>
+                    <p:inputText id="lastname" value="#{userRegisterController.user.lastName}" required="true"
+                                 label="Lastname">
+                        <f:validateLength minimum="2"/>
+                    </p:inputText>
+
+                    <p:outputLabel for="businessTitle" value="Business title: "/>
+                    <p:inputText id="businessTitle" value="#{userRegisterController.user.businessTitle}"/>
+
+                    <p:outputLabel for="registerDate" value="Register date: "/>
+                    <p:calendar id="registerDate" value="#{userRegisterController.user.registerDate}"/>
+
+                    <p:outputLabel for="email" value="Email:"/>
+                    <p:inputText id="email" value="#{userRegisterController.user.email}"/>
+
+                    <p:outputLabel for="registrationNumber" value="Registration number: "/>
+                    <p:inputText id="registrationNumber" value="#{userRegisterController.user.registrationNumber}"/>
+
+                    <p:outputLabel for="annualMembershipFee" value="Annual membership fee: "/>
+                    <p:inputText id="annualMembershipFee" value="#{userRegisterController.user.annualMembershipFee}"/>
+
+                    <p:outputLabel for="membershipEndDate" value="Membership end date: "/>
+                    <p:calendar id="membershipEndDate" value="#{userRegisterController.user.membershipEndDate}"/>
+
+                    <p:outputLabel for="advertiserState" value="State: "/>
+                    <h:selectOneMenu id="advertiserState" value="#{userRegisterController.user.advertiserState}"
+                                     style="width: 180px; height: 30px">
+                        <f:selectItems value="#{userRegisterController.advertiserStates}"/>
+                    </h:selectOneMenu>
+                    <!--<p:inputText id="advertiserState" value="#{userRegisterController.user.advertiserState}"/>-->
+
+                    <p:outputLabel for="userName" value="User name: "/>
+                    <p:inputText id="userName" value="#{userRegisterController.user.userName}"/>
+
+                    <p:outputLabel for="password" value="Password: "/>
+                    <p:password id="password" value="#{userRegisterController.user.password}"/>
+
+                </h:panelGrid>
+
+                <p:commandButton id="saveBtn" value="Save" icon="pi pi-save" style="margin:0"
+                                 action="#{userRegisterController.save}" update="growl"/>
+            </p:panel>
+
+            <!--<p:blockUI block="pnl" trigger="saveBtn"/>-->
+
+        </h:form>
+
+
+    </h:body>
+</f:view>
+</html>

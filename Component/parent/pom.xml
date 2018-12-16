@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ir.component</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0.RELEASE</version>
+
+    <packaging>pom</packaging>
+    <name>Parent Pom</name>
+    <properties>
+        <project.version>1.0.0.RELEASE</project.version>
+        <spring.version>5.0.7.RELEASE</spring.version>
+        <springSecurity.framework.version>4.2.3.RELEASE</springSecurity.framework.version><!-- SS-5.0 removed ShaPasswordEncoder -->
+        <myfacesVersion>2.2.12</myfacesVersion>
+        <junit.version>4.12</junit.version>
+        <mysql.version>5.1.9</mysql.version>
+        <hibernate.version>5.3.7.Final</hibernate.version>
+        <jpa.version>2.2</jpa.version>
+        <apache.common.lang>3.8.1</apache.common.lang>
+    </properties>
+
+    <modules>
+        <module>../web</module>
+        <module>../core</module>
+        <module>../generaldao</module>
+        <module>../notification</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

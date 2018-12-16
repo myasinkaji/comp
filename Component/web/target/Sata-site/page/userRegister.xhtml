@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+
+    <h:body>
+
+        <style type="text/css">
+
+        </style>
+
+        <h:form id="userForm">
+
+            <p:growl id="growl"/>
+
+            <p:panel id="pnl" header="New User" style="margin-bottom:10px;">
+                <p:messages id="messages"/>
+                <h:panelGrid columns="2" cellpadding="5">
+                    <h:outputLabel for="firstname" value="First name: *"/>
+                    <p:inputText id="firstname" value="#{userRegisterController.user.firstName}" required="true"
+                                 label="Firstname">
+                        <f:validateLength minimum="2"/>
+                    </p:inputText>
+                    <!--<p:message for="firstname"/>-->
+
+                    <h:outputLabel for="lastname" value="Last name: *"/>
+                    <p:inputText id="lastname" value="#{userRegisterController.user.lastName}" required="true"
+                                 label="Lastname"/>
+                    <!--<p:message for="lastname"/>-->
+
+                    <p:outputLabel for="tel" value="Tel:"/>
+                    <p:inputText id="tel" value="#{userRegisterController.user.tel}"/>
+
+                    <p:outputLabel for="email" value="Email:"/>
+                    <p:inputText id="email" value="#{userRegisterController.user.email}"/>
+
+                    <!--<p:outputLabel for="userType" value="User type:" />
+                    <p:selectOneMenu id="userType" value="#{userRegisterController.user.ut}"
+                                     converter="enumConverter" panelStyle="width:180px"
+                                     effect="fade" style="width:160px" filter="true" filterMatchMode="contains">
+                        <f:selectItems value="#{userRegisterController.userTypes}" var="ut"
+                                       itemLabel="#{userRegisterController.getName(ut)}"
+                                       itemValue="#{ut}" />
+                    </p:selectOneMenu>-->
+
+
+                    <h:selectOneMenu id="type" value="#{userRegisterController.user.userType}"
+                                     label="Usertype" >
+                        <f:selectItems var="at" value="#{uiUtils.asSelectItem('userType', 0, 10)}"/>
+                    </h:selectOneMenu>
+
+                </h:panelGrid>
+
+                <p:commandButton id="saveBtn" value="Save" icon="pi pi-save" style="margin:0"
+                                 action="#{userRegisterController.save}" update="growl"/>
+            </p:panel>
+
+            <!--<p:blockUI block="pnl" trigger="saveBtn"/>-->
+
+        </h:form>
+
+
+    </h:body>
+</f:view>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:form id="advertisementRegistrationForm">
+            <p:panel id="advertisementRegistrationPanel" header="Advertisement Registration Panel"
+                     style="margin-bottom:10px;">
+                <h:panelGrid columns="2" cellpadding="5">
+                    <!--<p:row>-->
+                    <p:outputLabel for="title" value="Title: "/>
+                    <p:inputText id="title" value="#{advertisementController.advertisement.title}" required="true"
+                                 label="Tiltle" style="/*width: 185px; margin-left: 10px*/"/>
+                    <!--</p:row>-->
+                    <!--<p:row>-->
+                    <p:outputLabel for="guild" value="Guild: "/>
+                    <p:selectOneMenu id="guild" value="#{advertisementController.advertisement.guild}"
+                                     converter="entityConverter" panelStyle="width:180px"
+                                     effect="fade" style="width:147px" filter="true" filterMatchMode="contains">
+                        <f:selectItems value="#{guildController.allGuilds}" var="g" itemLabel="#{g.title}"
+                                       itemValue="#{g}"/>
+                    </p:selectOneMenu>
+                    <!--</p:row>-->
+                    <!--<p:row>-->
+                    <p:outputLabel for="fromValidityDate" value="From validity date: "/>
+                    <p:calendar id="fromValidityDate"
+                                value="#{advertisementController.advertisement.fromValidityDate}"/>
+
+                    <p:outputLabel for="toValidityDate" value="To validity date: "/>
+                    <p:calendar id="toValidityDate"
+                                value="#{advertisementController.advertisement.toValidityDate}"/>
+                    <!--</p:row>-->
+
+                    <p:outputLabel for="price" value="Price: "/>
+                    <p:inputText id="price" value="#{advertisementController.advertisement.price}"/>
+
+                    <p:outputLabel for="purchaseDiscount" value="Purchase discount: "/>
+                    <p:inputText id="purchaseDiscount" value="#{advertisementController.advertisement.purchaseDiscount}"/>
+
+                    <p:outputLabel for="saleCommission" value="Sale commission: "/>
+                    <p:inputText id="saleCommission" value="#{advertisementController.advertisement.saleCommission}"/>
+
+                    <p:outputLabel for="description" value="Description"/>
+                    <p:editor id="description" value="#{advertisementController.advertisement.description}"/>
+
+                    <h:outputLabel for="attachments" value="Attachments:" />
+                    <p:fileUpload id="attachments" fileUploadListener="#{advertisementController.handleFileUpload}"
+                                  mode="advanced" previewWidth="120" dragDropSupport="true" fileLimit="50"
+                                  validator="#{advertisementController.validate}" multiple="true" widgetVar="fup" />
+
+                </h:panelGrid>
+            </p:panel>
+            <p:commandButton id="add" value="save" action="#{advertisementController.save}"
+                             icon="fa fa-save"/>
+        </h:form>
+    </h:body>
+</f:view>
+</html>

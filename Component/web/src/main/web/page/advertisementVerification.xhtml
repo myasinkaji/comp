@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+    <h:body>
+
+
+        <h:form>
+
+            <p:dataGrid var="adv" value="#{advertisementVerificationController.allAdvertisement}" columns="3"
+                        layout="grid"
+                        rows="6" paginator="true" id="advertisement"
+                        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                        rowsPerPageTemplate="3,6,12">
+
+                <f:facet name="header">
+                    Verification of advertisement
+                </f:facet>
+
+
+                <p:panel header="#{adv.title}" style="text-align:center">
+                    <h:panelGrid columns="2" style="width:100%">
+                        <!--<p:graphicImage name="demo/images/car/#{car.brand}.gif"/>-->
+
+                        <h:outputText value="Title:"/>
+                        <h:outputText value="#{adv.title}"/>
+
+                        <h:outputText value="Guild:"/>
+                        <h:outputText value="#{adv.guild.title}"/>
+
+                        <h:outputText value="From Validity Date:"/>
+                        <h:outputText value="#{adv.fromValidityDate}"/>
+
+                        <h:outputText value="To Validity Date:"/>
+                        <h:outputText value="#{adv.toValidityDate}"/>
+
+                        <h:outputText value="Price:"/>
+                        <h:outputText value="$#{adv.price}"/>
+
+                        <h:outputText value="Purchase Discount:"/>
+                        <h:outputText value="#{adv.purchaseDiscount}"/>
+
+                        <h:outputText value="Sale Commission:"/>
+                        <h:outputText value="#{adv.saleCommission}"/>
+
+                        <h:outputText value="Description:"/>
+                        <h:outputText value="#{adv.description}" escape="false"/>
+
+                        <!--<p:graphicImage value="#{advertisementVerificationController.mediaUrl(adv)}" />-->
+                        <!--<h:button-->
+
+                    </h:panelGrid>
+
+
+                    <f:facet name="footer">
+                        <p:commandButton value="Accept" action="#{advertisementVerificationController.accept(adv)}"/>
+                        <p:commandButton value="Reject" action="#{advertisementVerificationController.reject(adv)}"/>
+
+                        <!--<p:selectOneRadio id="verification">
+                            <f:selectItem itemLabel="Accept" itemValue="true" />
+                            <f:selectItem itemLabel="Reject" itemValue="false" />
+                            <f:selectItem itemLabel="None" />
+                            <f:ajax update="msgQuestion" event="click"/>
+                        </p:selectOneRadio>-->
+                        <!--<p:message for="verification" id="msgQuestion" />-->
+                    </f:facet>
+                </p:panel>
+
+
+            </p:dataGrid>
+            <p:commandButton value="Save" action="#{advertisementVerificationController.save}"/>
+        </h:form>
+
+    </h:body>
+
+</f:view>
+</html>

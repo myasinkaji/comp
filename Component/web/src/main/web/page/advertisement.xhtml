@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+<h:head>
+</h:head>
+<h:body>
+    <p:carousel value="#{advertisementController.allAdvertisement}" headerText="Advertisement" var="adv" itemStyle="height:200px;text-align:center" numVisible="1" easing="easeOutBounce" style="width:500px" circular="true">
+        <h:panelGrid columns="2" style="width:100%" columnClasses="label,value">
+            <!--<f:facet name="header">
+                <p:graphicImage name="demo/images/car/#{car.brand}.gif"/>
+            </f:facet>-->
+
+            <h:outputText value="Title:" />
+            <h:outputText value="#{adv.title}" />
+
+            <h:outputText value="Guild:" />
+            <h:outputText value="#{adv.guild.title}" />
+
+            <h:outputText value="Price:" />
+            <h:outputText value="$#{adv.price}"/>
+
+            <h:outputText value="Description:" />
+            <h:outputText value="#{adv.description}" escape="false"/>
+
+            <!--<f:facet name="footer">
+                <p:commandButton update=":form:carDetail" oncomplete="PF('carDialog').show()" icon="pi pi-search">
+                    <f:setPropertyActionListener value="#{car}" target="#{carouselView.selectedCar}" />
+                </p:commandButton>
+            </f:facet>-->
+        </h:panelGrid>
+    </p:carousel>
+</h:body>
+</f:view>
+</html>

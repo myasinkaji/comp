@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <import resource="classpath:/META-INF/dao-context.xml"/>
+
+
+
+    <bean id="conf" class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="fileEncoding" value="utf-8" />
+        <property name="locations">
+            <list>
+                <value>classpath:META-INF/sata.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--<bean id="props" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="fallbackToSystemLocale" value="true" />
+        <property name="useCodeAsDefaultMessage" value="true" />
+        <property name="basenames">
+            <list>
+                <value>/META-INF/${app.appname}</value>
+                &lt;!&ndash;<value>META-INF/sata</value>&ndash;&gt;
+            </list>
+        </property>
+        <property name="cacheSeconds" value="1" />
+    </bean>
+-->
+
+    <bean id="expressionParser" class="org.springframework.expression.spel.standard.SpelExpressionParser"/>
+
+    <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="view">
+                    <bean class="ir.component.web.config.SpringViewScope"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="textEncryptor" class="org.springframework.security.crypto.encrypt.Encryptors" factory-method="text">
+        <constructor-arg name="password" value="this_ISaGoodPassword12"/>
+        <constructor-arg name="salt" value="abcdef123456"/>
+    </bean>
+
+
+</beans>

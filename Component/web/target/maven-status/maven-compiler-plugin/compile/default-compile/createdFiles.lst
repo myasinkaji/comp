@@ -1,0 +1,8 @@
+ir\component\web\controller\MessageTableController.class
+ir\component\web\service\EntityConverter.class
+ir\component\web\controller\ProfileController.class
+ir\component\web\controller\BasicController.class
+ir\component\web\controller\MessageTableController$Message.class
+ir\component\web\controller\NotificationController.class
+ir\component\web\config\SpringViewScope.class
+ir\component\web\controller\UserRegisterController.class

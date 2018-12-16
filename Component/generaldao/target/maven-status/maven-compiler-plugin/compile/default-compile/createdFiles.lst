@@ -1,0 +1,5 @@
+ir\component\generaldao\jpa_hibernate\Main.class
+ir\component\generaldao\jpa_hibernate\Student.class
+ir\component\generaldao\ReflectionUtil.class
+ir\component\generaldao\GenericDao.class
+ir\component\generaldao\JpaGenericDao.class

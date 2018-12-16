@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" encoding="UTF-8" transient="true">
+    <h:head>
+    </h:head>
+
+    <h:body>
+
+
+        <h:outputText value="#{bundle.skin}: " />
+        <p:themeSwitcher value="#{cartableController.theme}" styleClass="ltr">
+            <f:selectItems value="#{cartableController.themes}" var="th" />
+        </p:themeSwitcher>
+
+        <h:form id="userForm">
+
+<!--
+
+            <p:dataTable id="messageTable" var="message" value="#{messageTableController.messages}" widgetVar="$messageTable"
+                         paginator="true" rows="5" paginatorPosition="bottom"
+                         filteredValue="#{messageTableController.filteredMessages}">
+                <f:facet name="header">
+                    <h:outputText value="Basic Message Table"/>
+                    <h:outputText value="-As At Date-"/>
+                    <h:outputText value="#{messageTableController.currentDate}">
+                        <f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+                    </h:outputText>
+                    <p:spacer width="20"></p:spacer>
+                    <p:selectBooleanCheckbox id="select" value="#{messageTableController.checkValue}" itemLabel="All"/>
+                    <p:outputPanel style="float:right;margin-top: 4px">
+                        <h:outputText value="Search all fields:" />
+                        <p:inputText id="globalFilter" onkeyup="PF('$messageTable').filter()" style="width:100px;height:10px;" />
+                    </p:outputPanel>
+
+                </f:facet>
+                <p:column filterBy="#{message.subject}">
+                    <f:facet name="header">
+                        <h:outputText value="Subject" />
+                    </f:facet>
+                    <h:outputText value="#{message.subject}" style="float:left" />
+                </p:column>
+                <p:column filterBy="#{message.text}">
+                    <f:facet name="header">
+                        <h:outputText value="Text"/>
+                    </f:facet>
+                    <h:outputText value="#{message.text}" style="center" />
+                </p:column>
+                <p:column filterBy="#{message.time}" filterStyle="float:right">
+                    <f:facet name="header">
+                        <h:outputText value="Time" style="float:right"/>
+                    </f:facet>
+                    <h:outputText value="#{message.time}" style="right"/>
+                </p:column>
+            </p:dataTable>
+
+            <p:dataTable id="messageDetailsTable" var="message" value="#{messageTableController.messages}"  style="margin-top:20px"
+                         paginator="true" rows="5" paginatorPosition="bottom"
+                         filteredValue="#{messageTableController.filteredMessages}">
+                <f:facet name="header">
+                    <h:outputText value="Message Table With More Details"/>
+                </f:facet>
+                <p:column filterBy="#{message.subject}">
+                    <f:facet name="header">
+                        <h:outputText value="Subject"/>
+                    </f:facet>
+                    <h:outputText value="#{message.subject}" style="float:left"/>
+                </p:column>
+                <p:column filterBy="#{message.textLength}">
+                    <f:facet name="header">
+                        <h:outputText value="Text Length" style="float:right"/>
+                    </f:facet>
+                    <h:outputText value="#{message.textLength}" style="float:right"/>
+                </p:column>
+                <p:column filterBy="#{message.country}">
+                    <f:facet name="header">
+                        <h:outputText value="Country" />
+                    </f:facet>
+                    <h:outputText value="#{message.country}" style="center"/>
+                </p:column>
+                <p:column filterBy="#{message.deliveryStatus}">
+                    <f:facet name="header">
+                        <h:outputText value="Delivery Status"/>
+                    </f:facet>
+                    <h:outputText value="#{message.deliveryStatus}" />
+                </p:column>
+            </p:dataTable>
+
+            <p:spacer height="30"/>
+
+
+            <p:panel header="Export PDF and Excel">
+                <p:commandLink id="pdf" ajax="false">
+                    <p:graphicImage value="/resources/images/pdf.png"/>
+                    <f:setPropertyActionListener value="false" target="#{exporterController.customExporter}" />
+                    <p:dataExporter type="pdf" target="messageTable,messageDetailsTable" fileName="MessagesAndDetails" datasetPadding="4"
+                                 skipComponents="org.primefaces.component.selectbooleancheckbox.SelectBooleanCheckbox,org.primefaces.component.spacer.Spacer,org.primefaces.component.outputpanel.OutputPanel"/>
+
+                </p:commandLink>
+
+                <p:spacer width="20"/>
+
+                <p:commandLink id="xls" ajax="false">
+                    <p:graphicImage value="/resources/images/excel.png"/>
+                    <f:setPropertyActionListener value="false" target="#{exporterController.customExporter}" />
+                    <p:dataExporter type="xlsx" target="messageTable,messageDetailsTable" fileName="MessagesAndDetails" datasetPadding="4"
+                                 skipComponents="org.primefaces.component.selectbooleancheckbox.SelectBooleanCheckbox,org.primefaces.component.spacer.Spacer,org.primefaces.component.outputpanel.OutputPanel"/>
+                </p:commandLink>
+
+            </p:panel>
+-->
+
+
+            <p:growl id="growl"/>
+
+            <p:panel id="notificatinPanel" header="Notification Panel" style="margin-bottom:10px;">
+                <p:messages id="messages"/>
+                <h:panelGrid columns="2" cellpadding="5">
+
+                    <p:outputLabel for="subject" value="Subject: *" />
+                    <p:inputText id="subject" value="#{notificationController.subject}" required="true"
+                                 label="Subject" />
+                    <p:outputLabel for="notification" value="Notification Type" />
+                    <p:selectOneMenu id="notification" value="#{notificationController.selectedNotification}"
+                                     converter="entityConverter" panelStyle="width:180px"
+                                     effect="fade" style="width:160px" filter="true" filterMatchMode="contains">
+                        <f:selectItems value="#{notificationController.notificationTypes}" var="nt" itemLabel="#{notificationController.getName(nt)}"
+                                       itemValue="#{nt}" />
+                    </p:selectOneMenu>
+
+                    <h:outputLabel for="recipient" value="Recipient: *"/>
+                    <p:inputText id="recipient" value="#{notificationController.recipient}" required="true"
+                                 label="recipient" requiredMessage="Recipient:Validation Error: This must be entered!">
+                        <f:validateLength minimum="10"/>
+                    </p:inputText>
+                    <!--<p:message for="recipient"/>-->
+
+                    <h:outputLabel for="message" value="Message: *"/>
+                    <!--<p:inputTextarea id="message" rows="5" cols="30" autoResize="true" required="true"/>-->
+                    <p:editor id="message" value="#{notificationController.message}" required="true"/>
+
+                </h:panelGrid>
+
+            </p:panel>
+
+            <p:commandButton id="sendBtn" value="Send" icon="fa fa-send" style="display:block; margin:0 auto;"
+                             action="#{notificationController.send}" update="growl"/>
+
+
+        </h:form>
+
+
+    </h:body>
+</f:view>
+</html>
