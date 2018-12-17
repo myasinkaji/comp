@@ -70,14 +70,6 @@ public class TaskInstanceProxy {
         this.description = description;
     }
 
-    public String getFormName() {
-        return formName;
-    }
-
-    public void setFormName(String formName) {
-        this.formName = formName;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -118,14 +110,6 @@ public class TaskInstanceProxy {
         this.activationTime = activationTime;
     }
 
-    public Date getExpirationDate() {
-        return expirationDate;
-    }
-
-    public void setExpirationDate(Date expirationDate) {
-        this.expirationDate = expirationDate;
-    }
-
     public Long getProcessInstanceId() {
         return processInstanceId;
     }
@@ -156,21 +140,5 @@ public class TaskInstanceProxy {
 
     public void setContainerId(String containerId) {
         this.containerId = containerId;
-    }
-
-    public Map<String, Object> getInputData() {
-        return inputData;
-    }
-
-    public void setInputData(Map<String, Object> inputData) {
-        this.inputData = inputData;
-    }
-
-    public Map<String, Object> getOutputData() {
-        return outputData;
-    }
-
-    public void setOutputData(Map<String, Object> outputData) {
-        this.outputData = outputData;
     }
 }

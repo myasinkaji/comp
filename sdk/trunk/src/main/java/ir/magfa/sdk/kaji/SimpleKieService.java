@@ -1,9 +1,6 @@
 package ir.magfa.sdk.kaji;
 
-import ir.magfa.sdk.model.MagfaTaskDefinition;
-import ir.magfa.sdk.model.ProcessDefinitionProxy;
-import ir.magfa.sdk.model.TaskInstanceProxy;
-import ir.magfa.sdk.model.User;
+import ir.magfa.sdk.model.*;
 import ir.magfa.sdk.utils.KieClientConstant;
 import org.apache.commons.lang3.Validate;
 import org.kie.server.api.marshalling.MarshallingFormat;
@@ -14,10 +11,12 @@ import org.kie.server.api.model.KieServerStateInfo;
 import org.kie.server.api.model.definition.*;
 import org.kie.server.api.model.instance.NodeInstance;
 import org.kie.server.api.model.instance.TaskInstance;
+import org.kie.server.api.model.instance.TaskSummary;
 import org.kie.server.client.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -40,6 +39,9 @@ public class SimpleKieService implements KieService {
 
     //    private String TASK_QUERY_NAME = "magfaTaskQuery";
     private String TASK_QUERY_NAME = "readyTasksFilterByActualOwner";
+
+    private ThreadLocal<Context> contextThreadLocal = new ThreadLocal<>();
+    private Context context = new Context();
 
     private SimpleKieService() {
     }
@@ -87,6 +89,21 @@ public class SimpleKieService implements KieService {
 
     }
 
+    @Override
+    public void aware(User user, String containerId, String processId, Long processInstanceId, Long taskInstanceId) {
+        this.contextThreadLocal.set(new Context(user, containerId, processId, processInstanceId, taskInstanceId));
+        this.context = new Context(user, containerId, processId, processInstanceId, taskInstanceId);
+    }
+
+    @Override
+    public void setContext(Context context) {
+        this.contextThreadLocal.set(context);
+        this.context = context;
+    }
+
+    public Context getContext() {
+        return context;
+    }
 
     @Override
     public VariablesDefinition getProcessVariableDefinitions(String containerId, String processId) {
@@ -160,7 +177,10 @@ public class SimpleKieService implements KieService {
     }
 
     @Override
-    public List<String> allContainers() {
+    public List<String> allContainers(User user) {
+        if (!initiated(user))
+            init(user.getUsername(), user.getPassword());
+
         List<String> containers = new ArrayList<>();
         KieContainerResourceList containersResourceList = kieServicesClient.listContainers().getResult();
         if (containersResourceList != null) {
@@ -213,44 +233,27 @@ public class SimpleKieService implements KieService {
         return proxy;
     }
 
-    private TaskInstanceProxy proxy(TaskInstance taskInstance) {
-        Validate.notNull(taskInstance, "TaskInstance must not be null!");
+    private TaskInstanceProxy proxy(TaskSummary task) {
+        Validate.notNull(task, "TaskInstance must not be null!");
 
         TaskInstanceProxy proxy = new TaskInstanceProxy();
 
-        proxy.setId(taskInstance.getId());
-        proxy.setContainerId(taskInstance.getContainerId());
-        proxy.setName(taskInstance.getName());
-        proxy.setCreatedBy(taskInstance.getCreatedBy());
-        proxy.setCreatedOn(taskInstance.getCreatedOn());
-        proxy.setActivationTime(taskInstance.getActivationTime());
-        proxy.setExpirationDate(taskInstance.getExpirationDate());
-        proxy.setActualOwner(taskInstance.getActualOwner());
-        proxy.setDescription(taskInstance.getDescription());
-        proxy.setFormName(taskInstance.getFormName());
-        proxy.setInputData(taskInstance.getInputData());
-        proxy.setSubject(taskInstance.getSubject());
-        proxy.setStatus(taskInstance.getStatus());
-        proxy.setProcessInstanceId(taskInstance.getProcessInstanceId());
-        proxy.setProcessId(taskInstance.getProcessId());
-        proxy.setPriority(taskInstance.getPriority());
-        proxy.setParentId(taskInstance.getParentId());
-        proxy.setOutputData(taskInstance.getOutputData());
+        proxy.setId(task.getId());
+        proxy.setContainerId(task.getContainerId());
+        proxy.setName(task.getName());
+        proxy.setCreatedBy(task.getCreatedBy());
+        proxy.setCreatedOn(task.getCreatedOn());
+        proxy.setActivationTime(task.getActivationTime());
+        proxy.setActualOwner(task.getActualOwner());
+        proxy.setDescription(task.getDescription());
+        proxy.setSubject(task.getSubject());
+        proxy.setStatus(task.getStatus());
+        proxy.setProcessInstanceId(task.getProcessInstanceId());
+        proxy.setProcessId(task.getProcessId());
+        proxy.setPriority(task.getPriority());
+        proxy.setParentId(task.getParentId());
 
         return proxy;
-    }
-
-    @Override
-    public void startProcess(String processDefinitionId) {
-        ProcessDefinition processDefinition = queryServicesClient.findProcessesById(processDefinitionId).get(0);
-        Long processInstanceId = processServicesClient.startProcess(processDefinition.getContainerId(), processDefinition.getId());
-        List<NodeInstance> completedNodes = queryServicesClient.findCompletedNodeInstances(processInstanceId, 0, 10);
-    }
-
-    @Override
-    public void startProcess(String containerId, String processId) throws IOException {
-        Long processInstanceId = processServicesClient.startProcess(containerId, processId);
-        List<NodeInstance> completedNodes = queryServicesClient.findCompletedNodeInstances(processInstanceId, 0, 10);
     }
 
     @Override
@@ -314,14 +317,57 @@ public class SimpleKieService implements KieService {
         return null;
     }
 
+    @Override
+    public void startProcess(String processDefinitionId) {
+        ProcessDefinition processDefinition = queryServicesClient.findProcessesById(processDefinitionId).get(0);
+        Long processInstanceId = processServicesClient.startProcess(processDefinition.getContainerId(), processDefinition.getId());
+        List<NodeInstance> completedNodes = queryServicesClient.findCompletedNodeInstances(processInstanceId, 0, 10);
+    }
 
     @Override
-    public void closeTask(String containerId, String taskInstanceId, User user) {
-        userTaskServicesClient.startTask(containerId, Long.parseLong(taskInstanceId), user.getUsername());
+    public void startProcess(String containerId, String processId) throws IOException {
+        Long processInstanceId = processServicesClient.startProcess(containerId, processId);
+        List<NodeInstance> completedNodes = queryServicesClient.findCompletedNodeInstances(processInstanceId, 0, 10);
+    }
+
+    @Override
+    public <T> String startProcess(String containerId, String processId, T variable) {
+        Map<String, Object> variables = SDKUtils.json(variable);
+        Long processInstanceId = processServicesClient.startProcess(containerId, processId, variables);
+        System.out.println("Started a task from processId: " + processInstanceId + " is started!");
+        return null;
+    }
+
+    @Override
+    public <T> String startProcess(T variables) throws IOException {
+        Map<String, Object> params = SDKUtils.json(variables);
+        Long processInstanceId = processServicesClient.startProcess(context.getContainerId(), context.getProcessId(), params);
+        System.out.println("Started a task from processId: " + processInstanceId + " is started!");
+        return null;
+    }
+
+    @Override
+    public <T> String closeTask(String containerId, String taskInstanceId, User user, T variables) {
+        Map<String, Object> params = SDKUtils.json(variables);
+        Long tid = Long.parseLong(taskInstanceId);
+        userTaskServicesClient.startTask(containerId, tid, user.getUsername());
+        userTaskServicesClient.completeTask(containerId, tid, user.getUsername(), params);
+
+        return user.getUsername();
+    }
+
+    @Override
+    public <T> String closeTask(T variables) {
+        Map<String, Object> params = SDKUtils.json(variables);
+        Long tid = context.getTaskInstanceId();
+        userTaskServicesClient.startTask(context.getContainerId(), tid, context.getUser().getUsername());
+        userTaskServicesClient.completeTask(context.getContainerId(), tid, context.getUser().getUsername(), params);
+
+        return context.getUser().getUsername();
     }
 
     private QueryDefinition userTaskQueryDefinition(String username) {
-        String q = "select * from task t where t.actualowner_id = '" + username + "'";
+        String q = "select t.id, t.formname, t.name, t.createdon, t.createdby_id, t.deploymentid, t.processid, t.processinstanceid, t.status, t.actualowner_id from task t where t.actualowner_id = '" + username + "' order by t.id desc";
         String readyTasksFilterByActualOwner = "readyTasksFilterByActualOwner";
         QueryDefinition query = new QueryDefinition();
         query.setName(readyTasksFilterByActualOwner);
@@ -334,13 +380,28 @@ public class SimpleKieService implements KieService {
         return query;
     }
 
-    @Override
-    public List<TaskInstanceProxy> openTasks(User user) {
 
+    @Override
+    public List<TaskInstanceProxy> assignedTasks(User user, Integer page, Integer pageSize) {
         if (!initiated(user))
             init(user.getUsername(), user.getPassword());
 
         List<TaskInstanceProxy> list = new ArrayList<>();
+        List<TaskSummary> taskSummaryList = userTaskServicesClient.findTasksAssignedAsPotentialOwner(user.getUsername(), page, pageSize);
+        if (taskSummaryList != null)
+            for (TaskSummary instance : taskSummaryList)
+                if (instance != null)
+                    list.add(proxy(instance));
+
+        return list;
+    }
+
+    @Override
+    public List<TaskInstance> openTasks(User user, Integer page, Integer pageSize) {
+        if (!initiated(user))
+            init(user.getUsername(), user.getPassword());
+
+        List<TaskInstance> list = new ArrayList<>();
 
         try {
             queryServicesClient.unregisterQuery(TASK_QUERY_NAME);
@@ -352,13 +413,37 @@ public class SimpleKieService implements KieService {
         queryServicesClient.registerQuery(userTaskQueryDefinition(user.getUsername()));
 
 
-        List<TaskInstance> tasks = queryServicesClient.query(TASK_QUERY_NAME, QueryServicesClient.QUERY_MAP_TASK, 0, 10, TaskInstance.class);
-        if (tasks != null)
-            for (TaskInstance instance : tasks)
+        List tasks = queryServicesClient.query(TASK_QUERY_NAME, QueryServicesClient.QUERY_MAP_RAW, page, pageSize, void.class);
+        if (tasks.size() > 0) {
+            List<ArrayList> tasksInf = tasks;
+            for (ArrayList taskInformations : tasksInf) {
+                TaskInstance instance = map(taskInformations);
                 if (instance != null)
-                    list.add(proxy(instance));
-
+                    list.add(instance);
+                else
+                    throw new RuntimeException("An Exception was occurred when mapping task information.");
+            }
+        }
         return list;
+    }
+
+    private TaskInstance map(ArrayList taskInformations) {
+        if (taskInformations != null && taskInformations.size() == 10) {
+            TaskInstance instance = new TaskInstance();
+
+            instance.setId(((Double)taskInformations.get(0)).longValue());
+            instance.setFormName((String) taskInformations.get(1));
+            instance.setName((String) taskInformations.get(2));
+            instance.setCreatedOn((Date) taskInformations.get(3));
+            instance.setCreatedBy((String) taskInformations.get(4));
+            instance.setContainerId((String) taskInformations.get(5));
+            instance.setProcessId((String) taskInformations.get(6));
+            instance.setProcessInstanceId(((Double)taskInformations.get(7)).longValue());
+            instance.setStatus((String) taskInformations.get(8));
+            instance.setActualOwner((String) taskInformations.get(9));
+            return instance;
+        }
+        return null;
     }
 
     private void setProcessServicesClient(ProcessServicesClient processServicesClient) {

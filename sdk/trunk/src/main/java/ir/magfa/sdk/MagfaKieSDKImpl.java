@@ -3,7 +3,7 @@ package ir.magfa.sdk;
 
 import ir.magfa.sdk.dto.ChainDTO;
 import ir.magfa.sdk.dto.KartableTaskDTO;
-import ir.magfa.sdk.dto.PermRequest;
+//import ir.magfa.sdk.dto.PermRequest;
 import ir.magfa.sdk.model.ProcessDefinitionProxy;
 import ir.magfa.sdk.model.TaskInstanceProxy;
 import ir.magfa.sdk.model.User;
@@ -153,7 +153,7 @@ public class MagfaKieSDKImpl implements MagfaKieSDK {
     public List<KartableTaskDTO> stateMachine(int state, String userName, KieServicesClient kieServicesClient,
                                               UserTaskServicesClient taskClient, QueryServicesClient queryClient,
                                               ProcessServicesClient processClient, KieContainerResourceList containers,
-                                              PermRequest permRequest) throws IOException, IllegalAccessException {
+                                              Object permRequest) throws IOException, IllegalAccessException {
         Long processInstanceId= 0l;
         Long taskId = 0l;
 
@@ -162,7 +162,7 @@ public class MagfaKieSDKImpl implements MagfaKieSDK {
 //        MagfaKieSDKImpl magfaKieSDK = new MagfaKieSDKImpl();
 
         if (1==state){
-            Map<String, Object> params = JbpmClientUtils.fillParam(permRequest);
+            Map<String, Object> params = JbpmClientUtils.json(permRequest);
             startProcessInstance(queryClient, processClient, params, KieClientConstant.CONTAINER_ID, KieClientConstant.PROCESS_ID);
             processInstanceId = JbpmClientUtils.readProccessIDFromFile();
             result=JbpmClientUtils.printNextUserInfo(kieServicesClient, processInstanceId,state);
@@ -175,7 +175,7 @@ public class MagfaKieSDKImpl implements MagfaKieSDK {
             completeTask(taskClient,KieClientConstant.CONTAINER_ID,taskId,userName,params);
             processInstanceId = JbpmClientUtils.readProccessIDFromFile();
             result=JbpmClientUtils.printNextUserInfo(kieServicesClient, processInstanceId,state);
-        }else if (3==state){
+        }else if (3==state) {
             List<TaskSummary> taskList = findAvailableTasks(taskClient, userName);
             taskId = taskList.get(0).getId();
             Map<String, Object> params = JbpmClientUtils.fillParam(permRequest);

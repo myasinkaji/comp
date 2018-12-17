@@ -11,7 +11,7 @@ import java.util.*;
 import ir.magfa.sdk.dto.ChainDTO;
 import ir.magfa.sdk.dto.DocumentDTO;
 import ir.magfa.sdk.dto.KartableTaskDTO;
-import ir.magfa.sdk.dto.PermRequest;
+//import ir.magfa.sdk.dto.PermRequest;
 import org.kie.server.api.model.definition.QueryDefinition;
 import org.kie.server.api.model.instance.TaskInstance;
 import org.kie.server.client.KieServicesClient;
@@ -22,6 +22,7 @@ import org.kie.server.client.QueryServicesClient;
  * Created by Mostafa.ّFarhadi on 11/28/2017.
  */
 public class JbpmClientUtils {
+/*
     public static Map<String,Object> fillParam(PermRequest permRequest){
         Gson gson = new Gson();
         String jsonParam = gson.toJson(permRequest);
@@ -30,6 +31,18 @@ public class JbpmClientUtils {
 //        paramMap.put("decision", false);
         return paramMap;
     }
+*/
+
+
+    public static Map<String,Object> json(Object object){
+        Gson gson = new Gson();
+        String jsonParam = gson.toJson(object);
+        java.lang.reflect.Type mapType = new TypeToken<Map<String, Object>>(){}.getType();
+        Map<String, Object> paramMap= gson.fromJson(jsonParam, mapType );
+//        paramMap.put("decision", false);
+        return paramMap;
+    }
+
 
     public static Map<String,Object> fillParam(Object obj) throws IllegalAccessException {
         Gson gson = new Gson();
@@ -138,7 +151,8 @@ public class JbpmClientUtils {
             QueryDefinition query = new QueryDefinition();
             query.setName(magfaQueryName);
             query.setSource("java:jboss/datasources/ExampleDS");
-            query.setExpression("select t.processid ,t.processinstanceid ,t.id,t.name,t.actualowner_id,taskinitiator_id,t.status,t.formname" + " " + " from task t where t.processinstanceid =" + processId);
+            query.setExpression("select t.processid ,t.processinstanceid ,t.id,t.name,t.actualowner_id,taskinitiator_id,t.status,t.formname" + " " +
+                    " from task t where t.processinstanceid =" + processId);
             query.setTarget("TASK");
             queryClient.registerQuery(query);
         }

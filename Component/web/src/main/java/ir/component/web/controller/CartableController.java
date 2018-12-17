@@ -3,8 +3,8 @@ package ir.component.web.controller;
 import ir.component.web.service.model.Container;
 import ir.magfa.sdk.kaji.SimpleKieService;
 import ir.magfa.sdk.model.ProcessDefinitionProxy;
-import ir.magfa.sdk.model.TaskInstanceProxy;
 import ir.magfa.sdk.model.User;
+import org.kie.server.api.model.instance.TaskInstance;
 import org.primefaces.model.menu.DefaultMenuItem;
 import org.primefaces.model.menu.DefaultMenuModel;
 import org.primefaces.model.menu.DefaultSubMenu;
@@ -25,6 +25,8 @@ import java.util.List;
 @Scope("view")
 public class CartableController {
 
+    private static final String CONTAINER_PROCESS_DELIMITER = "###";
+
     @Resource
     private SessionBean sessionBean;
 
@@ -32,8 +34,6 @@ public class CartableController {
     private UiUtil uiUtil;
 
     private MenuModel model;
-
-    private boolean renderForm = false;
 
     private List<Container> containers = new ArrayList<>();
 
@@ -74,7 +74,8 @@ public class CartableController {
                         item = new DefaultMenuItem(proxy.getName());
                         item.setIcon("fa fa-tasks");
 //            item.setCommand("#{PF('carDialog').show()}");
-                        item.setCommand("#{cartableController.startProcess('" + proxy.getContainerId() + "%$#" + proxy.getId() + "')}");
+                        item.setCommand("#{cartableController.openProcessForm('" + proxy.getContainerId() + CONTAINER_PROCESS_DELIMITER +
+                                proxy.getId() + CONTAINER_PROCESS_DELIMITER + proxy.getName() + "')}");
 //            item.setOnclick("PF('dlg2').show();");
                         item.setUpdate("messages");
                         subMenu.addElement(item);
@@ -136,7 +137,7 @@ public class CartableController {
     }
 
     private List<String> allContainers() {
-        return SimpleKieService.INSTANCE().allContainers();
+        return SimpleKieService.INSTANCE().allContainers(sessionBean.getUser());
     }
 
 
@@ -148,32 +149,42 @@ public class CartableController {
         return SimpleKieService.INSTANCE().processDefinitions(containerId, sessionBean.getUser());
     }
 
-    public List<TaskInstanceProxy> getOpenTasks() {
+    public List<TaskInstance> getOpenTasks() {
         try {
             uiUtil.checkUser();
-            return SimpleKieService.INSTANCE().openTasks(sessionBean.getUser());
+            return SimpleKieService.INSTANCE().openTasks(sessionBean.getUser(), 0, 100);
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public void startProcess(ProcessDefinitionProxy process) {
-        System.out.println(process);
+    public void openTaskForm(TaskInstance taskInstance) {
+        try {
+            SimpleKieService.INSTANCE().getContext().setContainerId(taskInstance.getContainerId());
+            SimpleKieService.INSTANCE().getContext().setProcessId(taskInstance.getProcessId());
+            SimpleKieService.INSTANCE().getContext().setProcessInstanceId(taskInstance.getProcessInstanceId());
+            SimpleKieService.INSTANCE().getContext().setTaskInstanceId(taskInstance.getId());
+            SimpleKieService.INSTANCE().getContext().setUser(sessionBean.getUser());
+            UiUtil.redirect(UiUtil.formOf(taskInstance));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void startProcess(String process) {
-        System.out.println(process);
-    }
-    public void startProcess(User user) {
-        System.out.println(user);
-    }
+    public void openProcessForm(String process) {
+        try {
+            String[] strings = process.split(CONTAINER_PROCESS_DELIMITER);
+            if (strings.length != 3)
+                return;
 
-    public boolean isRenderForm() {
-        return renderForm;
-    }
-
-    public void setRenderForm(boolean renderForm) {
-        this.renderForm = renderForm;
+            String containerId = strings[0];
+            String processName = strings[2];
+            String processId = strings[1];
+            SimpleKieService.INSTANCE().aware(sessionBean.getUser(), containerId, processId, null, null);
+            UiUtil.redirect(UiUtil.processForm(processName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

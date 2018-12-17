@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html" encoding="UTF-8" transient="true">
     <h:head id="header">
     </h:head>
@@ -33,7 +33,6 @@
                     <p:panelMenu model="#{cartableController.model}" style="width:300px"/>
 
 
-
                 </p:layoutUnit>
 
 
@@ -44,181 +43,183 @@
 
                 <p:layoutUnit position="center">
 
-                    <ui:fragment rendered="#{not cartableController.renderForm}">
-                        <p:tabView>
-                            <p:ajax event="tabChange" listener="#{tabbedView.onTabChange}" update="@form:messages"/>
-                            <p:ajax event="tabClose" listener="#{tabbedView.onTabClose}" update="@form:messages"/>
+                    <!--<ui:fragment rendered="#{not cartableController.renderForm}">-->
+                    <p:tabView>
+                        <p:ajax event="tabChange" listener="#{tabbedView.onTabChange}" update="@form:messages"/>
+                        <p:ajax event="tabClose" listener="#{tabbedView.onTabClose}" update="@form:messages"/>
 
-                            <p:tab title="Open Task">
-                                <h:panelGrid columns="2" cellpadding="5">
-                                    <!-- <f:facet name="header">
-                                         <p:graphicImage name="demo/images/car/#{car.brand}-big.gif"/>
-                                     </f:facet>-->
-                                    <p:dataTable id="tbl" var="task" value="#{cartableController.openTasks}"
-                                                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
-                                                 paginator="true" rows="10" style="margin-bottom:20px">
-
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Task Id"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.id}"/>
-                                        </p:column>
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Task Name"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.name}"/>
-                                        </p:column>
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Created Date"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.createdOn}"/>
-                                        </p:column>
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Created By"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.createdBy}"/>
-                                        </p:column>
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Process Id"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.processId}"/>
-                                        </p:column>
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Process Instance Id"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.processInstanceId}"/>
-                                        </p:column>
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Creator"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.actualOwner}"/>
-                                        </p:column>
-
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="State"/>
-                                            </f:facet>
-                                            <h:outputText value="#{task.status}"/>
-                                        </p:column>
-                                        <p:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="Operation"/>
-                                            </f:facet>
-
-                                            <p:commandLink value="Start"
-                                                           oncomplete="PF('studentPermissionDlg').show()"
-                                                           title="View Detail">
-                                                <h:outputText value="Execute" styleClass="ui-icon pi pi-search"
-                                                              style="margin:0 auto;"/>
-                                                <!--<f:setPropertyActionListener value="#{car}" target="#{dataGridView.selectedCar}" />-->
-                                            </p:commandLink>
-                                        </p:column>
-                                    </p:dataTable>
-                                </h:panelGrid>
-                            </p:tab>
-                            <p:tab title="Suspend Task">
-                                <h:panelGrid columns="2" cellpadding="5">
-                                    <f:facet name="header">
-                                        Suspend Task Header
-                                    </f:facet>
+                        <p:tab title="Open Task">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <!-- <f:facet name="header">
+                                     <p:graphicImage name="demo/images/car/#{car.brand}-big.gif"/>
+                                 </f:facet>-->
+                                <p:dataTable id="tbl" var="task" value="#{cartableController.openTasks}"
+                                             paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                                             paginator="true" rows="10" style="margin-bottom:20px">
 
 
-                                    <p:commandLink oncomplete="PF('loginDialog').show()"
-                                                   title="View Detail">
-                                        <h:outputText styleClass="ui-icon pi pi-search" style="margin:0 auto;"/>
-                                        <!--<f:setPropertyActionListener value="#{car}" target="#{dataGridView.selectedCar}" />-->
-                                    </p:commandLink>
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Task Id"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.id}"/>
+                                    </p:column>
+
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Task Name"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.name}"/>
+                                    </p:column>
+
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Created Date"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.createdOn}"/>
+                                    </p:column>
+
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Created By"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.createdBy}"/>
+                                    </p:column>
+
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Process Id"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.processId}"/>
+                                    </p:column>
+
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Process Instance Id"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.processInstanceId}"/>
+                                    </p:column>
+
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Creator"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.actualOwner}"/>
+                                    </p:column>
+
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="State"/>
+                                        </f:facet>
+                                        <h:outputText value="#{task.status}"/>
+                                    </p:column>
+                                    <p:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="Operation"/>
+                                        </f:facet>
+
+                                        <p:commandButton value="Open Form"
+                                                         action="#{cartableController.openTaskForm(task)}"/>
+                                    </p:column>
+                                </p:dataTable>
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab title="Permission">
+                            <h:panelGrid columns="2" cellpadding="5">
 
 
-                                </h:panelGrid>
-                            </p:tab>
-                            <p:tab title="Closed Task">
-                                <h:panelGrid columns="2" cellpadding="5">
-                                    <f:facet name="header">
-                                        Cartable Header
-                                    </f:facet>
-                                </h:panelGrid>
-                            </p:tab>
-                            <p:tab title="Notification">
-                                <h:panelGrid columns="2" cellpadding="5">
-                                    <h3 style="margin-top:0">Cartable Notifications</h3>
-                                    <br/>
-                                    <p:accordionPanel>
-                                        <p:tab title="Email Notifications">
-                                            <h:panelGrid columns="2" cellpadding="10">
-                                                <h:outputText
-                                                        value="There is no any message now."/>
-                                            </h:panelGrid>
-                                        </p:tab>
-                                        <p:tab title="SMS Notifications">
-                                            <h:panelGrid columns="2" cellpadding="10">
-                                                <h:outputText value="There is no any message now."/>
-                                            </h:panelGrid>
-                                        </p:tab>
-                                        <p:tab title="Telegram Notifications">
-                                            <h:panelGrid columns="2" cellpadding="10">
-                                                <h:outputText value="There is no any message now."/>
-                                            </h:panelGrid>
-                                        </p:tab>
-                                    </p:accordionPanel>
-                                </h:panelGrid>
-                            </p:tab>
+                                <div class="ui-fluid">
+                                    <p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
+                                                 columnClasses="ui-grid-col-4,ui-grid-col-8">
+                                        <p:outputLabel for="portletName" value="portletName"/>
+                                        <p:inputText id="portletName"
+                                                     value="#{evaluationController.requestDTO.portletName}"/>
+
+                                        <p:outputLabel for="employee" value="employee"/>
+                                        <p:inputText id="employee" value="#{evaluationController.requestDTO.employee}"/>
+
+                                        <p:outputLabel for="documentId" value="documentId"/>
+                                        <p:inputText id="documentId"
+                                                     value="#{evaluationController.requestDTO.documentId}"/>
+
+                                        <p:outputLabel for="title" value="title"/>
+                                        <p:inputText id="title" value="#{evaluationController.requestDTO.title}"/>
+
+                                        <p:outputLabel for="performance" value="performance"/>
+                                        <p:inputText id="performance"
+                                                     value="#{evaluationController.requestDTO.performance}"/>
+
+                                        <p:outputLabel for="reason" value="reason"/>
+                                        <p:inputText id="reason" value="#{evaluationController.requestDTO.reason}"/>
 
 
-                            <p:tab title="Dashboard">
-                                <h:panelGrid columns="2" cellpadding="5">
-                                    <f:facet name="header">
-                                        Cartable Header
-                                    </f:facet>
+                                        <!--          <p:outputLabel for="desc" value="Description"/>
+                                                  <p:inputTextarea id="desc" value="#{studentPermissionController.request.description}"/>
 
-                                    <p:chart type="donut" responsive="true" model="#{chartView.donutModel1}"
-                                             style="width:400px;height:300px"/>
-                                    <!--<br />-->
-                                    <p:chart type="donut" model="#{chartView.donutModel2}"
-                                             style="width:400px;height:300px"/>
+                                                  <p:outputLabel for="to" value="From"/>
+                                                  <p:calendar id="from" value="#{studentPermissionController.request.permissionFrom}"/>
 
-                                </h:panelGrid>
-                            </p:tab>
-                        </p:tabView>
-                    </ui:fragment>
+                                                  <p:outputLabel for="to" value="From"/>
+                                                  <p:calendar id="to" value="#{studentPermissionController.request.permissionTo}"/>-->
 
-                    <ui:fragment rendered="#{cartableController.renderForm}">
-                        <div class="ui-fluid">
-                            <p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank"
-                                         columnClasses="ui-grid-col-4,ui-grid-col-8">
-                                <p:outputLabel for="subject" value="Subject"/>
-                                <p:inputText id="subject" value="#{studentPermissionController.request.subject}"/>
+                                        <f:facet name="footer">
+                                            <p:commandButton value="Execute" action="#{evaluationController.register}"/>
+                                        </f:facet>
+                                    </p:panelGrid>
+                                </div>
 
-                                <p:outputLabel for="desc" value="Description"/>
-                                <p:inputTextarea id="desc" value="#{studentPermissionController.request.description}"/>
-
-                                <p:outputLabel for="to" value="From"/>
-                                <p:calendar id="from" value="#{studentPermissionController.request.permissionFrom}"/>
-
-                                <p:outputLabel for="to" value="From"/>
-                                <p:calendar id="to" value="#{studentPermissionController.request.permissionTo}"/>
-
-                                <f:facet name="footer">
-                                    <p:commandButton value="Register" action="#{studentPermissionController.register}"
-                                                     onclick="PF('studentPermissionDlg').hide()"/>
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab title="Closed Task">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <f:facet name="header">
+                                    Cartable Header
                                 </f:facet>
-                            </p:panelGrid>
-                        </div>
-                    </ui:fragment>
+                            </h:panelGrid>
+                        </p:tab>
+                        <p:tab title="Notification">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h3 style="margin-top:0">Cartable Notifications</h3>
+                                <br/>
+                                <p:accordionPanel>
+                                    <p:tab title="Email Notifications">
+                                        <h:panelGrid columns="2" cellpadding="10">
+                                            <h:outputText
+                                                    value="There is no any message now."/>
+                                        </h:panelGrid>
+                                    </p:tab>
+                                    <p:tab title="SMS Notifications">
+                                        <h:panelGrid columns="2" cellpadding="10">
+                                            <h:outputText value="There is no any message now."/>
+                                        </h:panelGrid>
+                                    </p:tab>
+                                    <p:tab title="Telegram Notifications">
+                                        <h:panelGrid columns="2" cellpadding="10">
+                                            <h:outputText value="There is no any message now."/>
+                                        </h:panelGrid>
+                                    </p:tab>
+                                </p:accordionPanel>
+                            </h:panelGrid>
+                        </p:tab>
+
+
+                        <p:tab title="Dashboard">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <f:facet name="header">
+                                    Cartable Header
+                                </f:facet>
+
+                                <p:chart type="donut" responsive="true" model="#{chartView.donutModel1}"
+                                         style="width:400px;height:300px"/>
+                                <!--<br />-->
+                                <p:chart type="donut" model="#{chartView.donutModel2}"
+                                         style="width:400px;height:300px"/>
+
+                            </h:panelGrid>
+                        </p:tab>
+                    </p:tabView>
+                    <!--</ui:fragment>-->
+
 
                 </p:layoutUnit>
 

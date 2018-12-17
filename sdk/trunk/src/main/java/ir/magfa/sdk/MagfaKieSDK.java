@@ -2,7 +2,7 @@ package ir.magfa.sdk;
 
 import ir.magfa.sdk.dto.ChainDTO;
 import ir.magfa.sdk.dto.KartableTaskDTO;
-import ir.magfa.sdk.dto.PermRequest;
+//import ir.magfa.sdk.dto.PermRequest;
 import ir.magfa.sdk.model.ProcessDefinitionProxy;
 import ir.magfa.sdk.model.TaskInstanceProxy;
 import ir.magfa.sdk.model.User;
@@ -190,7 +190,7 @@ public interface MagfaKieSDK {
     List<TaskSummary> findTasksByVariableAndValue(UserTaskServicesClient taskClient, String userId, String variableName, String variableValue, List<String> status, Integer page, Integer pageSize, String sort, boolean sortOrder);
      KieServicesClient initConfiguration(String serviceURL,String userName,String password);
 
-    public List<KartableTaskDTO> stateMachine(int state, String userName, KieServicesClient kieServicesClient, UserTaskServicesClient taskClient, QueryServicesClient queryClient, ProcessServicesClient processClient, KieContainerResourceList containers, PermRequest permRequest) throws IOException, IllegalAccessException;
+    public List<KartableTaskDTO> stateMachine(int state, String userName, KieServicesClient kieServicesClient, UserTaskServicesClient taskClient, QueryServicesClient queryClient, ProcessServicesClient processClient, KieContainerResourceList containers, Object object) throws IOException, IllegalAccessException;
 //    public List<KartableTaskDTO> findAllTask(int state, String serviceURL, Object object, String userName, String password) throws IOException, IllegalAccessException;
 
 }

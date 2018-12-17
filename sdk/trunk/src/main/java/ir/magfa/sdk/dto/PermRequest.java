@@ -1,13 +1,16 @@
+/*
 package ir.magfa.sdk.dto;
 
 import java.util.Date;
 
+*/
 /**
  * Data model of Permission that is registered by student
  *
  * @author Mohammad Yasin Kaji
  *
- */
+ *//*
+
 public class PermRequest {
     private long id;
     private String subject;
@@ -68,3 +71,4 @@ public class PermRequest {
         this.student = student;
     }
 }
+*/
