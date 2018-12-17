@@ -1,0 +1,14 @@
+running kie server: 
+
+
+					./standalone.sh --server-config=standalone-full.xml -Djboss.socket.binding.port-offset=150 -Dorg.kie.server.id=magfa-kie-server -Dorg.kie.server.location=http://172.16.9.50:8230/kie-server/services/rest/server -Dorg.kie.server.controller=http://172.16.9.50:8080/kie-wb/rest/controller -Dorg.kie.server.persistence.dialect=org.hibernate.dialect.PostgreSQLDialect -Dorg.kie.server.persistence.ds=java:jboss/datasources/ExampleDS -bmanagement=0.0.0.0
+
+
+
+
+Runnting Kie Workbench:
+
+			
+				
+					 ./standalone.sh --server-config=standalone-full.xml -Dorg.kie.server.id=magfa-kie-server -Dorg.kie.server.location=http://172.16.9.50:8080/kie-server/services/rest/server-bmanagement=0.0.0.0
+
