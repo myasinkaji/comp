@@ -1,9 +1,9 @@
 package ir.component.web.controller;
 
 import ir.component.web.service.model.Container;
-import ir.magfa.sdk.kaji.SimpleKieService;
-import ir.magfa.sdk.model.ProcessDefinitionProxy;
+import ir.magfa.sdk.model.MagfaProcessDefinition;
 import ir.magfa.sdk.model.User;
+import ir.magfa.sdk.service.impl.KieService;
 import org.kie.server.api.model.instance.TaskInstance;
 import org.primefaces.model.menu.DefaultMenuItem;
 import org.primefaces.model.menu.DefaultMenuModel;
@@ -66,11 +66,11 @@ public class CartableController {
 //                subMenu.setIcon("fa fa-arrow-circle-down");
 
 
-                List<ProcessDefinitionProxy> processDefinitionsProxies = getProcessDefinitionList(container);
+                List<MagfaProcessDefinition> processDefinitionsProxies = getProcessDefinitionList(container);
                 Container container1Obj = new Container(processDefinitionsProxies);
                 this.containers.add(container1Obj);
                 if (processDefinitionsProxies != null) {
-                    for (ProcessDefinitionProxy proxy : processDefinitionsProxies) {
+                    for (MagfaProcessDefinition proxy : processDefinitionsProxies) {
                         item = new DefaultMenuItem(proxy.getName());
                         item.setIcon("fa fa-tasks");
 //            item.setCommand("#{PF('carDialog').show()}");
@@ -137,7 +137,7 @@ public class CartableController {
     }
 
     private List<String> allContainers() {
-        return SimpleKieService.INSTANCE().allContainers(sessionBean.getUser());
+        return KieService.allContainers(sessionBean.getUser());
     }
 
 
@@ -145,14 +145,14 @@ public class CartableController {
         return model;
     }
 
-    public List<ProcessDefinitionProxy> getProcessDefinitionList(String containerId) throws IOException, IllegalAccessException {
-        return SimpleKieService.INSTANCE().processDefinitions(containerId, sessionBean.getUser());
+    public List<MagfaProcessDefinition> getProcessDefinitionList(String containerId) throws IOException, IllegalAccessException {
+        return KieService.processDefinitions(containerId, sessionBean.getUser());
     }
 
     public List<TaskInstance> getOpenTasks() {
         try {
             uiUtil.checkUser();
-            return SimpleKieService.INSTANCE().openTasks(sessionBean.getUser(), 0, 100);
+            return KieService.openTasks(sessionBean.getUser(), 0, 100);
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
@@ -161,11 +161,11 @@ public class CartableController {
 
     public void openTaskForm(TaskInstance taskInstance) {
         try {
-            SimpleKieService.INSTANCE().getContext().setContainerId(taskInstance.getContainerId());
-            SimpleKieService.INSTANCE().getContext().setProcessId(taskInstance.getProcessId());
-            SimpleKieService.INSTANCE().getContext().setProcessInstanceId(taskInstance.getProcessInstanceId());
-            SimpleKieService.INSTANCE().getContext().setTaskInstanceId(taskInstance.getId());
-            SimpleKieService.INSTANCE().getContext().setUser(sessionBean.getUser());
+            KieService.getContext().setContainerId(taskInstance.getContainerId());
+            KieService.getContext().setProcessId(taskInstance.getProcessId());
+            KieService.getContext().setProcessInstanceId(taskInstance.getProcessInstanceId());
+            KieService.getContext().setTaskInstanceId(taskInstance.getId());
+            KieService.getContext().setUser(sessionBean.getUser());
             UiUtil.redirect(UiUtil.formOf(taskInstance));
         } catch (IOException e) {
             e.printStackTrace();
@@ -181,7 +181,7 @@ public class CartableController {
             String containerId = strings[0];
             String processName = strings[2];
             String processId = strings[1];
-            SimpleKieService.INSTANCE().aware(sessionBean.getUser(), containerId, processId, null, null);
+            KieService.aware(sessionBean.getUser(), containerId, processId, null, null);
             UiUtil.redirect(UiUtil.processForm(processName));
         } catch (IOException e) {
             e.printStackTrace();

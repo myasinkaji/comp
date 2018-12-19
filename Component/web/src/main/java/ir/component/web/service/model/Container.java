@@ -1,6 +1,6 @@
 package ir.component.web.service.model;
 
-import ir.magfa.sdk.model.ProcessDefinitionProxy;
+import ir.magfa.sdk.model.MagfaProcessDefinition;
 
 import java.util.List;
 
@@ -8,17 +8,17 @@ import java.util.List;
  * @author Mohammad Yasin Kaji
  */
 public class Container {
-    private List<ProcessDefinitionProxy> processDefinitionList;
+    private List<MagfaProcessDefinition> processDefinitionList;
 
-    public Container(List<ProcessDefinitionProxy> processDefinitionList) {
+    public Container(List<MagfaProcessDefinition> processDefinitionList) {
         this.processDefinitionList = processDefinitionList;
     }
 
-    public List<ProcessDefinitionProxy> getProcessDefinitionList() {
+    public List<MagfaProcessDefinition> getProcessDefinitionList() {
         return processDefinitionList;
     }
 
-    public void setProcessDefinitionList(List<ProcessDefinitionProxy> processDefinitionList) {
+    public void setProcessDefinitionList(List<MagfaProcessDefinition> processDefinitionList) {
         this.processDefinitionList = processDefinitionList;
     }
 }

@@ -2,29 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="25b607f5-d103-4aca-ad2b-8b5ff04ceb53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/KajiTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/StudentPermission.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/ChainDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/PermRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/QueryServiceImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SDKUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SimpleKieService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/Context.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaProcessDefinition.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaTaskDefinition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/ProcessDefinitionProxy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/TaskInstanceProxy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/ThreadLocalExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaTaskInstance.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/KieService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/SDKUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/TaskStatus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/QueryServiceImplTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/StudentPermission.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/ThreadLocalExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/ChainDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/PermRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/Test.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/utils/JbpmClientUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/utils/KieClientConstant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDK.java" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDK.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/Test.java" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/KieClientConstant.java" afterPath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/KieClientConstant.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDK.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDK.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDKImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/Test.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KajiTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/DocumentDTO.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/DocumentDTO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/KartableTaskDTO.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/KartableTaskDTO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/Note.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/Note.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/RequestDTO.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/RequestDTO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/JbpmClientUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/KieClientConstant.java" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/KieClientConstant.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/services" afterPath="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/services" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,10 +63,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/Test.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="47" column="64" lean-forward="false" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,64 +77,28 @@
       <file leaf-file-name="UserTaskServicesClient.java" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/UserTaskServicesClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="115" column="101" lean-forward="false" selection-start-line="115" selection-start-column="70" selection-end-line="115" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTaskServicesClientImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/impl/UserTaskServicesClientImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="862" column="29" lean-forward="false" selection-start-line="862" selection-start-column="29" selection-end-line="862" selection-end-column="29" />
+            <state relative-caret-position="17">
+              <caret line="127" column="22" lean-forward="false" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="KieExecutionServerClientTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3798#3814#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProcessServicesClientImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/impl/ProcessServicesClientImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="253" column="8" lean-forward="false" selection-start-line="253" selection-start-column="8" selection-end-line="253" selection-end-column="8" />
+              <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryServicesClient.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/QueryServicesClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#7233#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JbpmClientUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/JbpmClientUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,243 +106,83 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SDKUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SDKUtils.java">
+      <file leaf-file-name="KajiTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KajiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="289">
+              <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChainDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/ChainDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/DocumentDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KartableTaskDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/KartableTaskDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Note.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/Note.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SDKUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/SDKUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MagfaKieSDK.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDK.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDK.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="192" column="36" lean-forward="false" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
+            <state relative-caret-position="357">
+              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm-human-task-jpa/7.2.0.Final/jbpm-human-task-jpa-7.2.0.Final-sources.jar!/org/jbpm/services/task/impl/model/TaskImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="32" />
-              <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#7094#7095#0" expanded="false" />
-                <element signature="e#7119#7120#0" expanded="false" />
-                <element signature="e#7153#7154#0" expanded="false" />
-                <element signature="e#7181#7182#0" expanded="false" />
-                <element signature="e#7622#7623#0" expanded="false" />
-                <element signature="e#7657#7658#0" expanded="false" />
-                <element signature="e#7693#7694#0" expanded="false" />
-                <element signature="e#7724#7725#0" expanded="false" />
-                <element signature="e#7773#7774#0" expanded="false" />
-                <element signature="e#7813#7814#0" expanded="false" />
-                <element signature="e#7853#7854#0" expanded="false" />
-                <element signature="e#7881#7882#0" expanded="false" />
-                <element signature="e#7931#7932#0" expanded="false" />
-                <element signature="e#7965#7966#0" expanded="false" />
-                <element signature="e#8008#8009#0" expanded="false" />
-                <element signature="e#8039#8040#0" expanded="false" />
-                <element signature="e#8095#8096#0" expanded="false" />
-                <element signature="e#8135#8136#0" expanded="false" />
-                <element signature="e#8182#8183#0" expanded="false" />
-                <element signature="e#8217#8218#0" expanded="false" />
-                <element signature="e#8281#8282#0" expanded="false" />
-                <element signature="e#8329#8330#0" expanded="false" />
-                <element signature="e#8384#8385#0" expanded="false" />
-                <element signature="e#8424#8425#0" expanded="false" />
-                <element signature="e#8624#8625#0" expanded="false" />
-                <element signature="e#8657#8658#0" expanded="false" />
-                <element signature="e#8713#8714#0" expanded="false" />
-                <element signature="e#8774#8775#0" expanded="false" />
-                <element signature="e#8811#8812#0" expanded="false" />
-                <element signature="e#8842#8843#0" expanded="false" />
-                <element signature="e#8892#8893#0" expanded="false" />
-                <element signature="e#8947#8948#0" expanded="false" />
-                <element signature="e#8986#8987#0" expanded="false" />
-                <element signature="e#9018#9019#0" expanded="false" />
-                <element signature="e#9071#9072#0" expanded="false" />
-                <element signature="e#9129#9130#0" expanded="false" />
-                <element signature="e#9164#9165#0" expanded="false" />
-                <element signature="e#9195#9196#0" expanded="false" />
-                <element signature="e#9243#9244#0" expanded="false" />
-                <element signature="e#9283#9284#0" expanded="false" />
-                <element signature="e#9318#9319#0" expanded="false" />
-                <element signature="e#9349#9350#0" expanded="false" />
-                <element signature="e#9397#9398#0" expanded="false" />
-                <element signature="e#9437#9438#0" expanded="false" />
-                <element signature="e#11925#11926#0" expanded="false" />
-                <element signature="e#11963#11964#0" expanded="false" />
-                <element signature="e#12035#12036#0" expanded="false" />
-                <element signature="e#12089#12090#0" expanded="false" />
-                <element signature="e#12120#12121#0" expanded="false" />
-                <element signature="e#12147#12148#0" expanded="false" />
-                <element signature="e#12187#12188#0" expanded="false" />
-                <element signature="e#12219#12220#0" expanded="false" />
-                <element signature="e#12253#12254#0" expanded="false" />
-                <element signature="e#12283#12284#0" expanded="false" />
-                <element signature="e#12329#12330#0" expanded="false" />
-                <element signature="e#12367#12368#0" expanded="false" />
-                <element signature="e#12405#12406#0" expanded="false" />
-                <element signature="e#12439#12440#0" expanded="false" />
-                <element signature="e#12493#12494#0" expanded="false" />
-                <element signature="e#12539#12540#0" expanded="false" />
-                <element signature="e#12585#12586#0" expanded="false" />
-                <element signature="e#12653#12654#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskDataImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm-human-task-jpa/7.2.0.Final/jbpm-human-task-jpa-7.2.0.Final-sources.jar!/org/jbpm/services/task/impl/model/TaskDataImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7769">
-              <caret line="561" column="31" lean-forward="false" selection-start-line="561" selection-start-column="29" selection-end-line="561" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#3646#3647#0" expanded="false" />
-                <element signature="e#3687#3688#0" expanded="false" />
-                <element signature="e#3915#3916#0" expanded="false" />
-                <element signature="e#3957#3958#0" expanded="false" />
-                <element signature="e#11506#11507#0" expanded="false" />
-                <element signature="e#11535#11536#0" expanded="false" />
-                <element signature="e#11694#11695#0" expanded="false" />
-                <element signature="e#11731#11732#0" expanded="false" />
-                <element signature="e#11791#11792#0" expanded="false" />
-                <element signature="e#11843#11844#0" expanded="false" />
-                <element signature="e#11879#11880#0" expanded="false" />
-                <element signature="e#11913#11914#0" expanded="false" />
-                <element signature="e#11965#11966#0" expanded="false" />
-                <element signature="e#12030#12031#0" expanded="false" />
-                <element signature="e#12064#12065#0" expanded="false" />
-                <element signature="e#12096#12097#0" expanded="false" />
-                <element signature="e#12144#12145#0" expanded="false" />
-                <element signature="e#12205#12206#0" expanded="false" />
-                <element signature="e#12239#12240#0" expanded="false" />
-                <element signature="e#12271#12272#0" expanded="false" />
-                <element signature="e#12319#12320#0" expanded="false" />
-                <element signature="e#12361#12362#0" expanded="false" />
-                <element signature="e#12400#12401#0" expanded="false" />
-                <element signature="e#12437#12438#0" expanded="false" />
-                <element signature="e#12495#12496#0" expanded="false" />
-                <element signature="e#12547#12548#0" expanded="false" />
-                <element signature="e#12586#12587#0" expanded="false" />
-                <element signature="e#12623#12624#0" expanded="false" />
-                <element signature="e#12681#12682#0" expanded="false" />
-                <element signature="e#12733#12734#0" expanded="false" />
-                <element signature="e#12768#12769#0" expanded="false" />
-                <element signature="e#12799#12800#0" expanded="false" />
-                <element signature="e#12850#12851#0" expanded="false" />
-                <element signature="e#12892#12893#0" expanded="false" />
-                <element signature="e#12942#12943#0" expanded="false" />
-                <element signature="e#12986#12987#0" expanded="false" />
-                <element signature="e#13021#13022#0" expanded="false" />
-                <element signature="e#13054#13055#0" expanded="false" />
-                <element signature="e#13122#13123#0" expanded="false" />
-                <element signature="e#13177#13178#0" expanded="false" />
-                <element signature="e#13223#13224#0" expanded="false" />
-                <element signature="e#13260#13261#0" expanded="false" />
-                <element signature="e#13300#13301#0" expanded="false" />
-                <element signature="e#13323#13324#0" expanded="false" />
-                <element signature="e#13370#13371#0" expanded="false" />
-                <element signature="e#13403#13404#0" expanded="false" />
-                <element signature="e#13442#13443#0" expanded="false" />
-                <element signature="e#13472#13473#0" expanded="false" />
-                <element signature="e#13531#13532#0" expanded="false" />
-                <element signature="e#13578#13579#0" expanded="false" />
-                <element signature="e#14237#14238#0" expanded="false" />
-                <element signature="e#14278#14279#0" expanded="false" />
-                <element signature="e#14342#14343#0" expanded="false" />
-                <element signature="e#14394#14395#0" expanded="false" />
-                <element signature="e#14433#14434#0" expanded="false" />
-                <element signature="e#14468#14469#0" expanded="false" />
-                <element signature="e#14510#14511#0" expanded="false" />
-                <element signature="e#14550#14551#0" expanded="false" />
-                <element signature="e#14614#14615#0" expanded="false" />
-                <element signature="e#14672#14673#0" expanded="false" />
-                <element signature="e#14728#14729#0" expanded="false" />
-                <element signature="e#14776#14777#0" expanded="false" />
-                <element signature="e#15426#15427#0" expanded="false" />
-                <element signature="e#15465#15466#0" expanded="false" />
-                <element signature="e#15533#15534#0" expanded="false" />
-                <element signature="e#15589#15590#0" expanded="false" />
-                <element signature="e#15626#15627#0" expanded="false" />
-                <element signature="e#15659#15660#0" expanded="false" />
-                <element signature="e#15711#15712#0" expanded="false" />
-                <element signature="e#15755#15756#0" expanded="false" />
-                <element signature="e#15795#15796#0" expanded="false" />
-                <element signature="e#15833#15834#0" expanded="false" />
-                <element signature="e#15893#15894#0" expanded="false" />
-                <element signature="e#15947#15948#0" expanded="false" />
-                <element signature="e#16602#16603#0" expanded="false" />
-                <element signature="e#16634#16635#0" expanded="false" />
-                <element signature="e#16684#16685#0" expanded="false" />
-                <element signature="e#16726#16727#0" expanded="false" />
-                <element signature="e#16772#16773#0" expanded="false" />
-                <element signature="e#16810#16811#0" expanded="false" />
-                <element signature="e#16876#16877#0" expanded="false" />
-                <element signature="e#16930#16931#0" expanded="false" />
-                <element signature="e#16966#16967#0" expanded="false" />
-                <element signature="e#16998#16999#0" expanded="false" />
-                <element signature="e#17048#17049#0" expanded="false" />
-                <element signature="e#17090#17091#0" expanded="false" />
-                <element signature="e#17129#17130#0" expanded="false" />
-                <element signature="e#17166#17167#0" expanded="false" />
-                <element signature="e#17224#17225#0" expanded="false" />
-                <element signature="e#17276#17277#0" expanded="false" />
-                <element signature="e#17318#17319#0" expanded="false" />
-                <element signature="e#17349#17350#0" expanded="false" />
-                <element signature="e#18428#18429#0" expanded="false" />
-                <element signature="e#18468#18469#0" expanded="false" />
-                <element signature="e#18516#18517#0" expanded="false" />
-                <element signature="e#18550#18551#0" expanded="false" />
-                <element signature="e#18801#18813#0" expanded="false" />
-                <element signature="e#19767#19768#0" expanded="false" />
-                <element signature="e#19814#19815#0" expanded="false" />
-                <element signature="e#19847#19848#0" expanded="false" />
-                <element signature="e#19878#19879#0" expanded="false" />
-                <element signature="e#19924#19925#0" expanded="false" />
-                <element signature="e#19964#19965#0" expanded="false" />
-                <element signature="e#23671#23672#0" expanded="false" />
-                <element signature="e#23706#23707#0" expanded="false" />
-                <element signature="e#23776#23777#0" expanded="false" />
-                <element signature="e#23824#23825#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryFilterSpecBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/util/QueryFilterSpecBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#4271#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#947#959#0" expanded="false" />
-                <element signature="e#1086#1102#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MagfaKieSDKImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDKImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -373,10 +190,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryServiceImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/QueryServiceImplTest.java">
+      <file leaf-file-name="StudentPermission.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/StudentPermission.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryServiceImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/QueryServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2963">
               <caret line="1362" column="0" lean-forward="false" selection-start-line="1362" selection-start-column="0" selection-end-line="1362" selection-end-column="0" />
               <folding>
                 <marker date="1544969668505" expanded="false" signature="5203:5211" ph="&lt;~&gt;" />
@@ -404,34 +231,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessServicesClient.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/ProcessServicesClient.java">
+      <file leaf-file-name="KieServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="239">
+              <caret line="96" column="5" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KieService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="333" column="45" lean-forward="false" selection-start-line="333" selection-start-column="45" selection-end-line="333" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1610#1611#0" expanded="true" />
+                <element signature="e#1650#1651#0" expanded="true" />
+                <element signature="e#1693#1694#0" expanded="true" />
+                <element signature="e#1724#1725#0" expanded="true" />
+                <element signature="e#13201#13202#0" expanded="true" />
+                <element signature="e#13242#13243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KieClientConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/KieClientConstant.java">
+      <file leaf-file-name="KieExecutionServerClientTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/services/KieExecutionServerClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleKieService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SimpleKieService.java">
+      <file leaf-file-name="List.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/util/List.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
-              <caret line="118" column="16" lean-forward="false" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
+              <caret line="210" column="12" lean-forward="false" selection-start-line="210" selection-start-column="12" selection-end-line="210" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskStatus.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/TaskStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding>
-                <element signature="e#3685#3686#0" expanded="true" />
-                <element signature="e#3715#3716#0" expanded="true" />
+                <element signature="e#206#207#0" expanded="true" />
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -440,22 +309,110 @@
       <file leaf-file-name="TaskInstance.java" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/instance/TaskInstance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="1258">
               <caret line="98" column="16" lean-forward="false" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
               <folding>
-                <element signature="e#3111#3112#0" expanded="true" />
-                <element signature="e#3139#3140#0" expanded="true" />
+                <element signature="e#0#11358#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2989#2990#0" expanded="false" />
+                <element signature="e#3025#3026#0" expanded="false" />
+                <element signature="e#3052#3053#0" expanded="false" />
+                <element signature="e#3077#3078#0" expanded="false" />
+                <element signature="e#3175#3176#0" expanded="false" />
+                <element signature="e#3206#3207#0" expanded="false" />
+                <element signature="e#3255#3256#0" expanded="false" />
+                <element signature="e#3295#3296#0" expanded="false" />
+                <element signature="e#3326#3327#0" expanded="false" />
+                <element signature="e#3353#3354#0" expanded="false" />
+                <element signature="e#3393#3394#0" expanded="false" />
+                <element signature="e#3425#3426#0" expanded="false" />
+                <element signature="e#3459#3460#0" expanded="false" />
+                <element signature="e#3489#3490#0" expanded="false" />
+                <element signature="e#3535#3536#0" expanded="false" />
+                <element signature="e#3573#3574#0" expanded="false" />
+                <element signature="e#3611#3612#0" expanded="false" />
+                <element signature="e#3645#3646#0" expanded="false" />
+                <element signature="e#3699#3700#0" expanded="false" />
+                <element signature="e#3745#3746#0" expanded="false" />
+                <element signature="e#3780#3781#0" expanded="false" />
+                <element signature="e#3811#3812#0" expanded="false" />
+                <element signature="e#3859#3860#0" expanded="false" />
+                <element signature="e#3899#3900#0" expanded="false" />
+                <element signature="e#3934#3935#0" expanded="false" />
+                <element signature="e#3965#3966#0" expanded="false" />
+                <element signature="e#4013#4014#0" expanded="false" />
+                <element signature="e#4053#4054#0" expanded="false" />
+                <element signature="e#4086#4087#0" expanded="false" />
+                <element signature="e#4115#4116#0" expanded="false" />
+                <element signature="e#4159#4160#0" expanded="false" />
+                <element signature="e#4195#4196#0" expanded="false" />
+                <element signature="e#4233#4234#0" expanded="false" />
+                <element signature="e#4267#4268#0" expanded="false" />
+                <element signature="e#4321#4322#0" expanded="false" />
+                <element signature="e#4367#4368#0" expanded="false" />
+                <element signature="e#4403#4404#0" expanded="false" />
+                <element signature="e#4435#4436#0" expanded="false" />
+                <element signature="e#4485#4486#0" expanded="false" />
+                <element signature="e#4527#4528#0" expanded="false" />
+                <element signature="e#4561#4562#0" expanded="false" />
+                <element signature="e#4593#4594#0" expanded="false" />
+                <element signature="e#4641#4642#0" expanded="false" />
+                <element signature="e#4683#4684#0" expanded="false" />
+                <element signature="e#4722#4723#0" expanded="false" />
+                <element signature="e#4759#4760#0" expanded="false" />
+                <element signature="e#4817#4818#0" expanded="false" />
+                <element signature="e#4869#4870#0" expanded="false" />
+                <element signature="e#4908#4909#0" expanded="false" />
+                <element signature="e#4945#4946#0" expanded="false" />
+                <element signature="e#5003#5004#0" expanded="false" />
+                <element signature="e#5055#5056#0" expanded="false" />
+                <element signature="e#5091#5092#0" expanded="false" />
+                <element signature="e#5122#5123#0" expanded="false" />
+                <element signature="e#5171#5172#0" expanded="false" />
+                <element signature="e#5211#5212#0" expanded="false" />
+                <element signature="e#5246#5247#0" expanded="false" />
+                <element signature="e#5279#5280#0" expanded="false" />
+                <element signature="e#5329#5330#0" expanded="false" />
+                <element signature="e#5373#5374#0" expanded="false" />
+                <element signature="e#5415#5416#0" expanded="false" />
+                <element signature="e#5455#5456#0" expanded="false" />
+                <element signature="e#5519#5520#0" expanded="false" />
+                <element signature="e#5577#5578#0" expanded="false" />
+                <element signature="e#5610#5611#0" expanded="false" />
+                <element signature="e#5641#5642#0" expanded="false" />
+                <element signature="e#5687#5688#0" expanded="false" />
+                <element signature="e#5727#5728#0" expanded="false" />
+                <element signature="e#5763#5764#0" expanded="false" />
+                <element signature="e#5795#5796#0" expanded="false" />
+                <element signature="e#5845#5846#0" expanded="false" />
+                <element signature="e#5887#5888#0" expanded="false" />
+                <element signature="e#5925#5926#0" expanded="false" />
+                <element signature="e#5959#5960#0" expanded="false" />
+                <element signature="e#6013#6014#0" expanded="false" />
+                <element signature="e#6059#6060#0" expanded="false" />
+                <element signature="e#6107#6108#0" expanded="false" />
+                <element signature="e#6145#6146#0" expanded="false" />
+                <element signature="e#6213#6214#0" expanded="false" />
+                <element signature="e#6267#6268#0" expanded="false" />
+                <element signature="e#6314#6315#0" expanded="false" />
+                <element signature="e#6351#6352#0" expanded="false" />
+                <element signature="e#6417#6418#0" expanded="false" />
+                <element signature="e#6469#6470#0" expanded="false" />
+                <element signature="e#6516#6517#0" expanded="false" />
+                <element signature="e#6553#6554#0" expanded="false" />
+                <element signature="e#6619#6620#0" expanded="false" />
+                <element signature="e#6671#6672#0" expanded="false" />
+                <element signature="e#6720#6721#0" expanded="false" />
+                <element signature="e#6752#6753#0" expanded="false" />
+                <element signature="e#6815#6816#0" expanded="false" />
+                <element signature="e#6857#6858#0" expanded="false" />
+                <element signature="e#6907#6908#0" expanded="false" />
+                <element signature="e#6940#6941#0" expanded="false" />
+                <element signature="e#7005#7006#0" expanded="false" />
+                <element signature="e#7049#7050#0" expanded="false" />
+                <element signature="e#7698#7699#0" expanded="false" />
+                <element signature="e#7741#7742#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskSummary.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/instance/TaskSummary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -465,68 +422,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding>
-                <element signature="e#488#489#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ThreadLocalExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/ThreadLocalExample.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/ThreadLocalExample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-              <folding>
-                <element signature="e#204#213#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-446">
-              <caret line="362" column="50" lean-forward="false" selection-start-line="362" selection-start-column="50" selection-end-line="362" selection-end-column="50" />
-              <folding>
-                <element signature="e#15479#15480#0" expanded="true" />
-                <element signature="e#15545#15546#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Context.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/Context.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-231">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#901#902#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
-                <element signature="e#1109#1110#0" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1191#1192#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
-                <element signature="e#1275#1276#0" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-                <element signature="e#1379#1380#0" expanded="true" />
-                <element signature="e#1437#1438#0" expanded="true" />
-                <element signature="e#1476#1477#0" expanded="true" />
-                <element signature="e#1513#1514#0" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1623#1624#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -541,43 +447,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Container.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/Container.java">
+      <file leaf-file-name="Context.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/Context.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="89" column="13" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+            <state relative-caret-position="136">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="RequestDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/RequestDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/RequestDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KieService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PermRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/PermRequest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/PermRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="136">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="e#0#1345#0" expanded="true" />
                 <marker date="1545030458294" expanded="false" signature="422:433" ph=" { " />
                 <marker date="1545030458294" expanded="false" signature="443:449" ph=" }" />
                 <marker date="1545030458294" expanded="false" signature="481:492" ph=" { " />
@@ -607,39 +502,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessDefinitionProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/ProcessDefinitionProxy.java">
+      <file leaf-file-name="MagfaProcessDefinition.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaProcessDefinition.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="21" />
-              <folding>
-                <element signature="e#320#321#0" expanded="false" />
-                <element signature="e#345#346#0" expanded="false" />
-                <element signature="e#381#382#0" expanded="false" />
-                <element signature="e#409#410#0" expanded="false" />
-                <element signature="e#440#441#0" expanded="false" />
-                <element signature="e#467#468#0" expanded="false" />
-                <element signature="e#507#508#0" expanded="false" />
-                <element signature="e#539#540#0" expanded="false" />
-                <element signature="e#573#574#0" expanded="false" />
-                <element signature="e#603#604#0" expanded="false" />
-                <element signature="e#649#650#0" expanded="false" />
-                <element signature="e#687#688#0" expanded="false" />
-                <element signature="e#725#726#0" expanded="false" />
-                <element signature="e#759#760#0" expanded="false" />
-                <element signature="e#813#814#0" expanded="false" />
-                <element signature="e#859#860#0" expanded="false" />
-                <element signature="e#897#898#0" expanded="false" />
-                <element signature="e#931#932#0" expanded="false" />
-                <element signature="e#985#986#0" expanded="false" />
-                <element signature="e#1031#1032#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskInstanceProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/TaskInstanceProxy.java">
+      <file leaf-file-name="KieService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/KieService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="79" column="23" lean-forward="false" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MagfaTaskInstance.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaTaskInstance.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -701,7 +585,6 @@
                 <element signature="e#2868#2869#0" expanded="false" />
                 <element signature="e#2922#2923#0" expanded="false" />
                 <element signature="e#2968#2969#0" expanded="false" />
-                <marker date="1545054861029" expanded="true" signature="740:747" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -742,6 +625,8 @@
       <find>map</find>
       <find>evaluation_1.0.0</find>
       <find>evaluation.NajiProcess</find>
+      <find>(String[]) nus.toArray();</find>
+      <find>readyTasksFilterByActualOwner</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -765,7 +650,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/KajiTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/KieService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/services/KieExecutionServerClientTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/Task.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/TaskProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaTaskDefinition.java" />
@@ -781,9 +665,21 @@
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/ThreadLocalExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/Context.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/TaskInstanceProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/TaskStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SimpleKieService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/SimpleKieService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/SimpleKieService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/KieClientConstant.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaProcessDefinition.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ir/magfa/sdk/ThreadLocalExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieService2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -1000,40 +896,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="magfa-kie-sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="magfa-kie-sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1059,37 +923,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="magfa-kie-sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1102,6 +936,118 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magfa-kie-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="farhadi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magfa-kie-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magfa-kie-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magfa-kie-sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1132,66 +1078,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="magfa-kie-sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kaji" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="magfa-kie-sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1231,9 +1117,16 @@
     <property name="full.screen.before.presentation.mode" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ir.magfa.sdk" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ir.magfa.sdk.service.impl" />
       <recent name="ir.magfa.sdk.kaji" />
       <recent name="ir.magfa.sdk" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="K:\code\java\sdk\trunk\src\test\java\ir\magfa\sdk" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1252,11 +1145,11 @@
     <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ir.magfa.sdk.kaji.*" />
+          <option name="PATTERN" value="ir.magfa.sdk.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="ir.magfa.sdk.Test" />
+      <option name="MAIN_CLASS_NAME" value="ir.magfa.sdk.farhadi.Test" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1272,7 +1165,7 @@
     <configuration default="false" name="KajiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ir.magfa.sdk.kaji.*" />
+          <option name="PATTERN" value="ir.magfa.sdk.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1292,11 +1185,11 @@
     <configuration default="false" name="KieExecutionServerClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ir.magfa.sdk.kaji.*" />
+          <option name="PATTERN" value="ir.magfa.sdk.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="ir.magfa.sdk.kaji.KieExecutionServerClientTest" />
+      <option name="MAIN_CLASS_NAME" value="ir.magfa.sdk.KieExecutionServerClientTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1312,11 +1205,11 @@
     <configuration default="false" name="ThreadLocalExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ir.magfa.sdk.model.*" />
+          <option name="PATTERN" value="ir.magfa.sdk.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="ir.magfa.sdk.model.ThreadLocalExample" />
+      <option name="MAIN_CLASS_NAME" value="ir.magfa.sdk.ThreadLocalExample" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1790,7 +1683,8 @@
       <workItem from="1544506629499" duration="21723000" />
       <workItem from="1544949968671" duration="26412000" />
       <workItem from="1544983573311" duration="776000" />
-      <workItem from="1545030244529" duration="20249000" />
+      <workItem from="1545030244529" duration="20460000" />
+      <workItem from="1545222872848" duration="11207000" />
     </task>
     <task id="LOCAL-00001" summary="Changing groupId">
       <created>1543824336128</created>
@@ -1817,7 +1711,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102744000" />
+    <option name="totallyTimeSpent" value="114162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1830,70 +1724,39 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26332623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29685807" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1911,32 +1774,32 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/KajiTest.java</url>
-          <line>44</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KajiTest.java</url>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java</url>
-          <line>145</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/JbpmClientUtils.java</url>
+          <line>143</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java</url>
-          <line>188</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/JbpmClientUtils.java</url>
+          <line>186</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java</url>
-          <line>209</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/JbpmClientUtils.java</url>
+          <line>207</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/Test.java</url>
-          <line>56</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/Test.java</url>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
@@ -1947,62 +1810,62 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java</url>
-          <line>87</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java</url>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java</url>
-          <line>78</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java</url>
+          <line>72</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java</url>
-          <line>59</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java</url>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java</url>
-          <line>49</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java</url>
+          <line>43</line>
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java</url>
-          <line>54</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java</url>
+          <line>48</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java</url>
-          <line>156</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDKImpl.java</url>
+          <line>153</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java</url>
-          <line>165</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDKImpl.java</url>
+          <line>162</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java</url>
-          <line>266</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDKImpl.java</url>
+          <line>263</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java</url>
-          <line>169</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDKImpl.java</url>
+          <line>166</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SimpleKieService.java</url>
-          <line>369</line>
+          <url>file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieServiceImpl.java</url>
+          <line>412</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -2019,122 +1882,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/KieServicesClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/rest/RestURI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="106" column="49" lean-forward="false" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/definition/TaskOutputsDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/definition/VariablesDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/definition/TaskField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#1037#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/definition/UserTaskDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#4828#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1664#1665#0" expanded="false" />
-            <element signature="e#1700#1701#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1758#1759#0" expanded="false" />
-            <element signature="e#1798#1799#0" expanded="false" />
-            <element signature="e#1830#1831#0" expanded="false" />
-            <element signature="e#1866#1867#0" expanded="false" />
-            <element signature="e#1897#1898#0" expanded="false" />
-            <element signature="e#1946#1947#0" expanded="false" />
-            <element signature="e#1986#1987#0" expanded="false" />
-            <element signature="e#2020#2021#0" expanded="false" />
-            <element signature="e#2050#2051#0" expanded="false" />
-            <element signature="e#2096#2097#0" expanded="false" />
-            <element signature="e#2134#2135#0" expanded="false" />
-            <element signature="e#2170#2171#0" expanded="false" />
-            <element signature="e#2202#2203#0" expanded="false" />
-            <element signature="e#2252#2253#0" expanded="false" />
-            <element signature="e#2294#2295#0" expanded="false" />
-            <element signature="e#2330#2331#0" expanded="false" />
-            <element signature="e#2362#2363#0" expanded="false" />
-            <element signature="e#2413#2414#0" expanded="false" />
-            <element signature="e#2455#2456#0" expanded="false" />
-            <element signature="e#2502#2503#0" expanded="false" />
-            <element signature="e#2543#2544#0" expanded="false" />
-            <element signature="e#2613#2614#0" expanded="false" />
-            <element signature="e#2673#2674#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="false" />
-            <element signature="e#2770#2771#0" expanded="false" />
-            <element signature="e#2965#2966#0" expanded="false" />
-            <element signature="e#3006#3007#0" expanded="false" />
-            <element signature="e#3645#3646#0" expanded="false" />
-            <element signature="e#3686#3687#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/definition/UserTaskDefinitionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/definition/QueryFilterSpec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/impl/AbstractKieServicesClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="699" column="54" lean-forward="false" selection-start-line="699" selection-start-column="54" selection-end-line="699" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/kie-api/7.2.0.Final/kie-api-7.2.0.Final-sources.jar!/org/kie/api/task/model/TaskSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/kie-internal/7.2.0.Final/kie-internal-7.2.0.Final-sources.jar!/org/kie/internal/task/api/model/InternalTaskSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/jbpm/jbpm-human-task-jpa/7.2.0.Final/jbpm-human-task-jpa-7.2.0.Final-sources.jar!/org/jbpm/services/task/query/TaskSummaryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -2160,14 +1907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1005#1006#0" expanded="false" />
-            <element signature="e#1028#1029#0" expanded="false" />
-            <element signature="e#1066#1067#0" expanded="false" />
-            <element signature="e#1091#1092#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2175,9 +1914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2188,37 +1924,6 @@
           <folding>
             <element signature="e#0#4271#0" expanded="false" />
             <element signature="imports" expanded="false" />
-            <element signature="e#947#959#0" expanded="false" />
-            <element signature="e#1086#1102#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/ProcessDefinitionProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="e#320#321#0" expanded="false" />
-            <element signature="e#345#346#0" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#409#410#0" expanded="false" />
-            <element signature="e#440#441#0" expanded="false" />
-            <element signature="e#467#468#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="e#539#540#0" expanded="false" />
-            <element signature="e#573#574#0" expanded="false" />
-            <element signature="e#603#604#0" expanded="false" />
-            <element signature="e#649#650#0" expanded="false" />
-            <element signature="e#687#688#0" expanded="false" />
-            <element signature="e#725#726#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#813#814#0" expanded="false" />
-            <element signature="e#859#860#0" expanded="false" />
-            <element signature="e#897#898#0" expanded="false" />
-            <element signature="e#931#932#0" expanded="false" />
-            <element signature="e#985#986#0" expanded="false" />
-            <element signature="e#1031#1032#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2340,7 +2045,6 @@
             <element signature="e#18468#18469#0" expanded="false" />
             <element signature="e#18516#18517#0" expanded="false" />
             <element signature="e#18550#18551#0" expanded="false" />
-            <element signature="e#18801#18813#0" expanded="false" />
             <element signature="e#19767#19768#0" expanded="false" />
             <element signature="e#19814#19815#0" expanded="false" />
             <element signature="e#19847#19848#0" expanded="false" />
@@ -2443,17 +2147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieExecutionServerClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3798#3814#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/QueryServicesClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -2465,134 +2158,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/PermRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1345#0" expanded="true" />
-            <marker date="1545030458294" expanded="false" signature="422:433" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="443:449" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="481:492" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="505:511" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="547:558" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="577:583" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="635:646" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="677:683" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="715:726" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="741:747" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="791:802" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="825:831" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="868:879" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="901:907" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="963:974" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="1011:1017" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="1052:1063" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="1083:1089" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="1141:1152" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="1185:1191" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="1223:1234" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="1249:1255" ph=" }" />
-            <marker date="1545030458294" expanded="false" signature="1299:1310" ph=" { " />
-            <marker date="1545030458294" expanded="false" signature="1333:1339" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="192" column="36" lean-forward="false" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/impl/ProcessServicesClientImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="3502">
           <caret line="253" column="8" lean-forward="false" selection-start-line="253" selection-start-column="8" selection-end-line="253" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#0#47909#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2412#2413#0" expanded="false" />
+            <element signature="e#2441#2442#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/ProcessServicesClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="476">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SDKUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/dto/RequestDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/JbpmClientUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/QueryServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="1362" column="0" lean-forward="false" selection-start-line="1362" selection-start-column="0" selection-end-line="1362" selection-end-column="0" />
-          <folding>
-            <marker date="1544969668505" expanded="false" signature="5203:5211" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="5851:5867" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="7362:7373" ph=" { " />
-            <marker date="1544969668505" expanded="false" signature="7395:7401" ph=" }" />
-            <marker date="1544969668505" expanded="false" signature="14606:14622" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="17320:17336" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="20264:20280" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="21346:21362" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="24226:24242" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="29805:29821" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="32538:32554" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="32838:32854" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="34934:34950" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="37128:37144" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="37428:37444" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="46891:46899" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="48994:49002" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="49973:49989" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="51818:51826" ph="&lt;~&gt;" />
-            <marker date="1544969668505" expanded="false" signature="53338:53354" ph="&lt;~&gt;" />
+            <element signature="e#0#5819#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/Container.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="493">
           <caret line="89" column="13" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#193946#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#9051#9052#0" expanded="false" />
+            <element signature="e#9113#9114#0" expanded="false" />
+            <element signature="e#9886#9887#0" expanded="false" />
+            <element signature="e#9933#9934#0" expanded="false" />
+            <element signature="e#10271#10272#0" expanded="false" />
+            <element signature="e#10311#10312#0" expanded="false" />
+            <element signature="e#12355#12356#0" expanded="false" />
+            <element signature="e#12408#12409#0" expanded="false" />
+            <element signature="e#13051#13052#0" expanded="false" />
+            <element signature="e#13082#13083#0" expanded="false" />
+            <element signature="e#37520#37521#0" expanded="false" />
+            <element signature="e#37566#37567#0" expanded="false" />
+            <element signature="e#38879#38880#0" expanded="false" />
+            <element signature="e#38927#38928#0" expanded="false" />
+            <element signature="e#57194#57195#0" expanded="false" />
+            <element signature="e#57226#57227#0" expanded="false" />
+            <element signature="e#57986#57987#0" expanded="false" />
+            <element signature="e#58010#58011#0" expanded="false" />
+            <element signature="e#59821#59822#0" expanded="false" />
+            <element signature="e#59849#59850#0" expanded="false" />
+            <element signature="e#68082#68083#0" expanded="false" />
+            <element signature="e#68120#68121#0" expanded="false" />
+            <element signature="e#70002#70003#0" expanded="false" />
+            <element signature="e#70038#70039#0" expanded="false" />
+            <element signature="e#81634#81635#0" expanded="false" />
+            <element signature="e#81694#81695#0" expanded="false" />
+            <element signature="e#87722#87723#0" expanded="false" />
+            <element signature="e#87764#87765#0" expanded="false" />
+            <element signature="e#97114#97115#0" expanded="false" />
+            <element signature="e#97149#97150#0" expanded="false" />
+            <element signature="e#98662#98663#0" expanded="false" />
+            <element signature="e#98709#98710#0" expanded="false" />
+            <element signature="e#100201#100202#0" expanded="false" />
+            <element signature="e#100274#100275#0" expanded="false" />
+            <element signature="e#101895#101896#0" expanded="false" />
+            <element signature="e#101945#101946#0" expanded="false" />
+            <element signature="e#105676#105677#0" expanded="false" />
+            <element signature="e#105724#105725#0" expanded="false" />
+            <element signature="e#132816#132817#0" expanded="false" />
+            <element signature="e#132869#132870#0" expanded="false" />
+            <element signature="e#135304#135305#0" expanded="false" />
+            <element signature="e#135341#135342#0" expanded="false" />
+            <element signature="e#137100#137101#0" expanded="false" />
+            <element signature="e#137151#137152#0" expanded="false" />
+            <element signature="e#138490#138491#0" expanded="false" />
+            <element signature="e#138517#138518#0" expanded="false" />
+            <element signature="e#150133#150134#0" expanded="false" />
+            <element signature="e#150207#150208#0" expanded="false" />
+            <element signature="e#150486#150487#0" expanded="false" />
+            <element signature="e#150553#150554#0" expanded="false" />
+            <element signature="e#151074#151075#0" expanded="false" />
+            <element signature="e#151138#151139#0" expanded="false" />
+            <element signature="e#171680#171681#0" expanded="false" />
+            <element signature="e#171715#171716#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2609,128 +2260,154 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-446">
+        <state relative-caret-position="5457">
           <caret line="362" column="50" lean-forward="false" selection-start-line="362" selection-start-column="50" selection-end-line="362" selection-end-column="50" />
           <folding>
-            <element signature="e#15479#15480#0" expanded="true" />
-            <element signature="e#15545#15546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/ThreadLocalExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <element signature="e#204#213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1379#1380#0" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1476#1477#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaTaskDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#0#78740#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5560#5561#0" expanded="false" />
+            <element signature="e#5601#5602#0" expanded="false" />
+            <element signature="e#6683#6684#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
+            <element signature="e#14795#14796#0" expanded="false" />
+            <element signature="e#14859#14860#0" expanded="false" />
+            <element signature="e#15733#15734#0" expanded="false" />
+            <element signature="e#15804#15805#0" expanded="false" />
+            <element signature="e#17014#17015#0" expanded="false" />
+            <element signature="e#17081#17082#0" expanded="false" />
+            <element signature="e#17387#17388#0" expanded="false" />
+            <element signature="e#17428#17429#0" expanded="false" />
+            <element signature="e#18346#18347#0" expanded="false" />
+            <element signature="e#18388#18389#0" expanded="false" />
+            <element signature="e#18900#18901#0" expanded="false" />
+            <element signature="e#18943#18944#0" expanded="false" />
+            <element signature="e#21243#21244#0" expanded="false" />
+            <element signature="e#21287#21288#0" expanded="false" />
+            <element signature="e#33356#33357#0" expanded="false" />
+            <element signature="e#33413#33414#0" expanded="false" />
+            <element signature="e#36477#36478#0" expanded="false" />
+            <element signature="e#36535#36536#0" expanded="false" />
+            <element signature="e#37072#37073#0" expanded="false" />
+            <element signature="e#37115#37116#0" expanded="false" />
+            <element signature="e#38389#38390#0" expanded="false" />
+            <element signature="e#38434#38435#0" expanded="false" />
+            <element signature="e#42724#42725#0" expanded="false" />
+            <element signature="e#42755#42756#0" expanded="false" />
+            <element signature="e#43645#43646#0" expanded="false" />
+            <element signature="e#43690#43691#0" expanded="false" />
+            <element signature="e#43947#43948#0" expanded="false" />
+            <element signature="e#43975#43976#0" expanded="false" />
+            <element signature="e#44833#44834#0" expanded="false" />
+            <element signature="e#44902#44903#0" expanded="false" />
+            <element signature="e#46235#46236#0" expanded="false" />
+            <element signature="e#46308#46309#0" expanded="false" />
+            <element signature="e#50770#50771#0" expanded="false" />
+            <element signature="e#50832#50833#0" expanded="false" />
+            <element signature="e#51926#51927#0" expanded="false" />
+            <element signature="e#51955#51956#0" expanded="false" />
+            <element signature="e#65706#65707#0" expanded="false" />
+            <element signature="e#65732#65733#0" expanded="false" />
+            <element signature="e#75712#75713#0" expanded="false" />
+            <element signature="e#75784#75785#0" expanded="false" />
+            <element signature="e#76970#76971#0" expanded="false" />
+            <element signature="e#77005#77006#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/impl/UserTaskServicesClientImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
+        <state relative-caret-position="13957">
           <caret line="862" column="29" lean-forward="false" selection-start-line="862" selection-start-column="29" selection-end-line="862" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#69292#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1969#1970#0" expanded="false" />
+            <element signature="e#1998#1999#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/instance/TaskSummary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
+        <state relative-caret-position="136">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/UserTaskServicesClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="115" column="101" lean-forward="false" selection-start-line="115" selection-start-column="70" selection-end-line="115" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/MagfaKieSDKImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#8000#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2202#2203#0" expanded="false" />
+            <element signature="e#2238#2239#0" expanded="false" />
+            <element signature="e#2265#2266#0" expanded="false" />
+            <element signature="e#2290#2291#0" expanded="false" />
+            <element signature="e#2324#2325#0" expanded="false" />
+            <element signature="e#2352#2353#0" expanded="false" />
+            <element signature="e#2383#2384#0" expanded="false" />
+            <element signature="e#2410#2411#0" expanded="false" />
+            <element signature="e#2450#2451#0" expanded="false" />
+            <element signature="e#2482#2483#0" expanded="false" />
+            <element signature="e#2516#2517#0" expanded="false" />
+            <element signature="e#2546#2547#0" expanded="false" />
+            <element signature="e#2592#2593#0" expanded="false" />
+            <element signature="e#2630#2631#0" expanded="false" />
+            <element signature="e#2668#2669#0" expanded="false" />
+            <element signature="e#2702#2703#0" expanded="false" />
+            <element signature="e#2756#2757#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2835#2836#0" expanded="false" />
+            <element signature="e#2864#2865#0" expanded="false" />
+            <element signature="e#2908#2909#0" expanded="false" />
+            <element signature="e#2944#2945#0" expanded="false" />
+            <element signature="e#2980#2981#0" expanded="false" />
+            <element signature="e#3011#3012#0" expanded="false" />
+            <element signature="e#3060#3061#0" expanded="false" />
+            <element signature="e#3100#3101#0" expanded="false" />
+            <element signature="e#3136#3137#0" expanded="false" />
+            <element signature="e#3167#3168#0" expanded="false" />
+            <element signature="e#3216#3217#0" expanded="false" />
+            <element signature="e#3256#3257#0" expanded="false" />
+            <element signature="e#3294#3295#0" expanded="false" />
+            <element signature="e#3328#3329#0" expanded="false" />
+            <element signature="e#3382#3383#0" expanded="false" />
+            <element signature="e#3428#3429#0" expanded="false" />
+            <element signature="e#3464#3465#0" expanded="false" />
+            <element signature="e#3496#3497#0" expanded="false" />
+            <element signature="e#3546#3547#0" expanded="false" />
+            <element signature="e#3588#3589#0" expanded="false" />
+            <element signature="e#3622#3623#0" expanded="false" />
+            <element signature="e#3654#3655#0" expanded="false" />
+            <element signature="e#3702#3703#0" expanded="false" />
+            <element signature="e#3744#3745#0" expanded="false" />
+            <element signature="e#3783#3784#0" expanded="false" />
+            <element signature="e#3820#3821#0" expanded="false" />
+            <element signature="e#3878#3879#0" expanded="false" />
+            <element signature="e#3930#3931#0" expanded="false" />
+            <element signature="e#3969#3970#0" expanded="false" />
+            <element signature="e#4006#4007#0" expanded="false" />
+            <element signature="e#4064#4065#0" expanded="false" />
+            <element signature="e#4116#4117#0" expanded="false" />
+            <element signature="e#4158#4159#0" expanded="false" />
+            <element signature="e#4198#4199#0" expanded="false" />
+            <element signature="e#4262#4263#0" expanded="false" />
+            <element signature="e#4320#4321#0" expanded="false" />
+            <element signature="e#4356#4357#0" expanded="false" />
+            <element signature="e#4388#4389#0" expanded="false" />
+            <element signature="e#4438#4439#0" expanded="false" />
+            <element signature="e#4480#4481#0" expanded="false" />
+            <element signature="e#4518#4519#0" expanded="false" />
+            <element signature="e#4552#4553#0" expanded="false" />
+            <element signature="e#4606#4607#0" expanded="false" />
+            <element signature="e#4652#4653#0" expanded="false" />
+            <element signature="e#4685#4686#0" expanded="false" />
+            <element signature="e#4716#4717#0" expanded="false" />
+            <element signature="e#4762#4763#0" expanded="false" />
+            <element signature="e#4802#4803#0" expanded="false" />
+            <element signature="e#5544#5545#0" expanded="false" />
+            <element signature="e#5586#5587#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/KieService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/utils/KieClientConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/TaskInstanceProxy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaTaskInstance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -2792,30 +2469,417 @@
             <element signature="e#2868#2869#0" expanded="false" />
             <element signature="e#2922#2923#0" expanded="false" />
             <element signature="e#2968#2969#0" expanded="false" />
-            <marker date="1545054861029" expanded="true" signature="740:747" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-api/7.2.0.Final/kie-server-api-7.2.0.Final-sources.jar!/org/kie/server/api/model/instance/TaskInstance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="1258">
           <caret line="98" column="16" lean-forward="false" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
           <folding>
-            <element signature="e#3111#3112#0" expanded="true" />
-            <element signature="e#3139#3140#0" expanded="true" />
+            <element signature="e#0#11358#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2989#2990#0" expanded="false" />
+            <element signature="e#3025#3026#0" expanded="false" />
+            <element signature="e#3052#3053#0" expanded="false" />
+            <element signature="e#3077#3078#0" expanded="false" />
+            <element signature="e#3175#3176#0" expanded="false" />
+            <element signature="e#3206#3207#0" expanded="false" />
+            <element signature="e#3255#3256#0" expanded="false" />
+            <element signature="e#3295#3296#0" expanded="false" />
+            <element signature="e#3326#3327#0" expanded="false" />
+            <element signature="e#3353#3354#0" expanded="false" />
+            <element signature="e#3393#3394#0" expanded="false" />
+            <element signature="e#3425#3426#0" expanded="false" />
+            <element signature="e#3459#3460#0" expanded="false" />
+            <element signature="e#3489#3490#0" expanded="false" />
+            <element signature="e#3535#3536#0" expanded="false" />
+            <element signature="e#3573#3574#0" expanded="false" />
+            <element signature="e#3611#3612#0" expanded="false" />
+            <element signature="e#3645#3646#0" expanded="false" />
+            <element signature="e#3699#3700#0" expanded="false" />
+            <element signature="e#3745#3746#0" expanded="false" />
+            <element signature="e#3780#3781#0" expanded="false" />
+            <element signature="e#3811#3812#0" expanded="false" />
+            <element signature="e#3859#3860#0" expanded="false" />
+            <element signature="e#3899#3900#0" expanded="false" />
+            <element signature="e#3934#3935#0" expanded="false" />
+            <element signature="e#3965#3966#0" expanded="false" />
+            <element signature="e#4013#4014#0" expanded="false" />
+            <element signature="e#4053#4054#0" expanded="false" />
+            <element signature="e#4086#4087#0" expanded="false" />
+            <element signature="e#4115#4116#0" expanded="false" />
+            <element signature="e#4159#4160#0" expanded="false" />
+            <element signature="e#4195#4196#0" expanded="false" />
+            <element signature="e#4233#4234#0" expanded="false" />
+            <element signature="e#4267#4268#0" expanded="false" />
+            <element signature="e#4321#4322#0" expanded="false" />
+            <element signature="e#4367#4368#0" expanded="false" />
+            <element signature="e#4403#4404#0" expanded="false" />
+            <element signature="e#4435#4436#0" expanded="false" />
+            <element signature="e#4485#4486#0" expanded="false" />
+            <element signature="e#4527#4528#0" expanded="false" />
+            <element signature="e#4561#4562#0" expanded="false" />
+            <element signature="e#4593#4594#0" expanded="false" />
+            <element signature="e#4641#4642#0" expanded="false" />
+            <element signature="e#4683#4684#0" expanded="false" />
+            <element signature="e#4722#4723#0" expanded="false" />
+            <element signature="e#4759#4760#0" expanded="false" />
+            <element signature="e#4817#4818#0" expanded="false" />
+            <element signature="e#4869#4870#0" expanded="false" />
+            <element signature="e#4908#4909#0" expanded="false" />
+            <element signature="e#4945#4946#0" expanded="false" />
+            <element signature="e#5003#5004#0" expanded="false" />
+            <element signature="e#5055#5056#0" expanded="false" />
+            <element signature="e#5091#5092#0" expanded="false" />
+            <element signature="e#5122#5123#0" expanded="false" />
+            <element signature="e#5171#5172#0" expanded="false" />
+            <element signature="e#5211#5212#0" expanded="false" />
+            <element signature="e#5246#5247#0" expanded="false" />
+            <element signature="e#5279#5280#0" expanded="false" />
+            <element signature="e#5329#5330#0" expanded="false" />
+            <element signature="e#5373#5374#0" expanded="false" />
+            <element signature="e#5415#5416#0" expanded="false" />
+            <element signature="e#5455#5456#0" expanded="false" />
+            <element signature="e#5519#5520#0" expanded="false" />
+            <element signature="e#5577#5578#0" expanded="false" />
+            <element signature="e#5610#5611#0" expanded="false" />
+            <element signature="e#5641#5642#0" expanded="false" />
+            <element signature="e#5687#5688#0" expanded="false" />
+            <element signature="e#5727#5728#0" expanded="false" />
+            <element signature="e#5763#5764#0" expanded="false" />
+            <element signature="e#5795#5796#0" expanded="false" />
+            <element signature="e#5845#5846#0" expanded="false" />
+            <element signature="e#5887#5888#0" expanded="false" />
+            <element signature="e#5925#5926#0" expanded="false" />
+            <element signature="e#5959#5960#0" expanded="false" />
+            <element signature="e#6013#6014#0" expanded="false" />
+            <element signature="e#6059#6060#0" expanded="false" />
+            <element signature="e#6107#6108#0" expanded="false" />
+            <element signature="e#6145#6146#0" expanded="false" />
+            <element signature="e#6213#6214#0" expanded="false" />
+            <element signature="e#6267#6268#0" expanded="false" />
+            <element signature="e#6314#6315#0" expanded="false" />
+            <element signature="e#6351#6352#0" expanded="false" />
+            <element signature="e#6417#6418#0" expanded="false" />
+            <element signature="e#6469#6470#0" expanded="false" />
+            <element signature="e#6516#6517#0" expanded="false" />
+            <element signature="e#6553#6554#0" expanded="false" />
+            <element signature="e#6619#6620#0" expanded="false" />
+            <element signature="e#6671#6672#0" expanded="false" />
+            <element signature="e#6720#6721#0" expanded="false" />
+            <element signature="e#6752#6753#0" expanded="false" />
+            <element signature="e#6815#6816#0" expanded="false" />
+            <element signature="e#6857#6858#0" expanded="false" />
+            <element signature="e#6907#6908#0" expanded="false" />
+            <element signature="e#6940#6941#0" expanded="false" />
+            <element signature="e#7005#7006#0" expanded="false" />
+            <element signature="e#7049#7050#0" expanded="false" />
+            <element signature="e#7698#7699#0" expanded="false" />
+            <element signature="e#7741#7742#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/kaji/SimpleKieService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/kie/server/kie-server-client/7.2.0.Final/kie-server-client-7.2.0.Final-sources.jar!/org/kie/server/client/UserTaskServicesClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="127" column="22" lean-forward="false" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="118" column="16" lean-forward="false" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
+          <caret line="210" column="12" lean-forward="false" selection-start-line="210" selection-start-column="12" selection-end-line="210" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KieExecutionServerClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/SDKUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/TaskStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding>
-            <element signature="e#3685#3686#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="47" column="64" lean-forward="false" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDKImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/MagfaKieSDK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/JbpmClientUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/StudentPermission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/KajiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/ChainDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/DocumentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/KartableTaskDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/PermRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1545030458294" expanded="false" signature="422:433" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="443:449" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="481:492" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="505:511" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="547:558" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="577:583" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="635:646" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="677:683" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="715:726" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="741:747" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="791:802" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="825:831" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="868:879" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="901:907" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="963:974" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="1011:1017" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="1052:1063" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="1083:1089" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="1141:1152" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="1185:1191" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="1223:1234" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="1249:1255" ph=" }" />
+            <marker date="1545030458294" expanded="false" signature="1299:1310" ph=" { " />
+            <marker date="1545030458294" expanded="false" signature="1333:1339" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/dto/RequestDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaTaskDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/MagfaProcessDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/ThreadLocalExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/KieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="79" column="23" lean-forward="false" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/farhadi/KieClientConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/QueryServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2963">
+          <caret line="1362" column="0" lean-forward="false" selection-start-line="1362" selection-start-column="0" selection-end-line="1362" selection-end-column="0" />
+          <folding>
+            <marker date="1544969668505" expanded="false" signature="5203:5211" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="5851:5867" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="7362:7373" ph=" { " />
+            <marker date="1544969668505" expanded="false" signature="7395:7401" ph=" }" />
+            <marker date="1544969668505" expanded="false" signature="14606:14622" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="17320:17336" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="20264:20280" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="21346:21362" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="24226:24242" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="29805:29821" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="32538:32554" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="32838:32854" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="34934:34950" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="37128:37144" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="37428:37444" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="46891:46899" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="48994:49002" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="49973:49989" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="51818:51826" ph="&lt;~&gt;" />
+            <marker date="1544969668505" expanded="false" signature="53338:53354" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="96" column="5" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ir/magfa/sdk/services/KieExecutionServerClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/magfa/sdk/service/impl/KieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="333" column="45" lean-forward="false" selection-start-line="333" selection-start-column="45" selection-end-line="333" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#13201#13202#0" expanded="true" />
+            <element signature="e#13242#13243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

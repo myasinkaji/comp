@@ -2,8 +2,8 @@ package ir.component.web.controller;
 
 import ir.component.core.dao.model.RequestDTO;
 import ir.component.core.engine.RequestDTODao;
-import ir.magfa.sdk.kaji.SimpleKieService;
 import ir.magfa.sdk.model.Context;
+import ir.magfa.sdk.service.impl.KieService;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
@@ -30,11 +30,11 @@ public class EvaluationController {
     public void init() {
         requestDTO = new RequestDTO();
 
-        Context context = SimpleKieService.INSTANCE().getContext();
+        Context context = KieService.getContext();
 //SimpleKieService.INSTANCE().getProcessVariableDefinitions(context.getContainerId(), context.getProcessId());
         if (context != null && context.getProcessInstanceId() != null) {
             Map<String, Object> variables =
-                    SimpleKieService.INSTANCE().getProcessInstanceVariables(context.getContainerId(), context.getProcessInstanceId());
+                    KieService.getProcessInstanceVariables(context.getContainerId(), context.getProcessInstanceId());
 
             requestDTO.setReason((String) variables.get("reason"));
             requestDTO.setPerformance((String) variables.get("performance"));
@@ -51,9 +51,11 @@ public class EvaluationController {
     public void closeTask() {
         try {
             requestDTODao.merge(requestDTO);
-            Context context = SimpleKieService.INSTANCE().getContext();
-            SimpleKieService.INSTANCE().setProcessVariable(context.getContainerId(), context.getProcessInstanceId(), "request", requestDTO);
-            SimpleKieService.INSTANCE().closeTask(requestDTO);
+            Context context = KieService.getContext();
+            KieService.setProcessVariablesAsJson(context.getContainerId(), context.getProcessInstanceId(), requestDTO);
+            String[] nextUsers = KieService.closeTask(requestDTO);
+            System.out.println("Next Users for Task with id: " + context.getTaskInstanceId() + " are: " + nextUsers);
+            KieService.setContext(new Context());
             UiUtil.redirect(UiUtil.cartable());
         } catch (IOException e) {
             e.printStackTrace();
@@ -62,7 +64,8 @@ public class EvaluationController {
     public void register() {
         try {
             requestDTODao.persist(requestDTO);
-            SimpleKieService.INSTANCE().startProcess(requestDTO);
+            String[] nextUsers = KieService.startProcess(requestDTO);
+            System.out.println("Next Users are: " + nextUsers);
             UiUtil.redirect(UiUtil.cartable());
         } catch (IOException e) {
             e.printStackTrace();
